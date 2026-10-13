@@ -27,17 +27,22 @@ export const profile = {
     {
       id: "languages",
       label: { pt: "Linguagens", en: "Languages" },
-      items: ["Java", "Python", "Go", "JavaScript"],
+      items: ["Java", "Go", "Python", "SQL"],
     },
     {
       id: "backend",
-      label: { pt: "Backend e dados", en: "Backend and data" },
-      items: ["Spring", "SQL", "MongoDB"],
+      label: { pt: "Backend", en: "Backend" },
+      items: ["Spring Boot"],
+    },
+    {
+      id: "databases",
+      label: { pt: "Bancos de dados", en: "Databases" },
+      items: ["PostgreSQL", "MongoDB", "Supabase"],
     },
     {
       id: "tools",
-      label: { pt: "Ferramentas", en: "Tools" },
-      items: ["Git", "Linux", "Docker", "IntelliJ"],
+      label: { pt: "DevOps e ferramentas", en: "DevOps & Tools" },
+      items: ["Docker", "CI/CD", "Linux", "Git", "Vercel"],
     },
   ],
 };
