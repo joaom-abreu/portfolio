@@ -6,12 +6,12 @@ export const profile = {
     en: "Software Engineering · PUC Minas",
   },
   tagline: {
-    pt: "Estudante do 2º período em Belo Horizonte. Gosto do que roda atrás da tela: backend e dados.",
-    en: "Second-semester student in Belo Horizonte. I like what runs behind the screen: backend and data.",
+    pt: "Estudante em Belo Horizonte, Brasil. Interessado em backend e engenharia de dados.",
+    en: "Student in Belo Horizonte, Brazil. Interested in backend and data engineering.",
   },
   taglineHighlight: {
-    pt: "backend e dados",
-    en: "backend and data",
+    pt: "backend e engenharia de dados",
+    en: "backend and data engineering",
   },
   about: [
     {
