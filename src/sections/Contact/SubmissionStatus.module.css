@@ -1,0 +1,21 @@
+.status {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.success {
+  color: var(--success);
+}
+
+.failure {
+  color: var(--danger);
+}
+
+.icon {
+  flex: none;
+  width: 16px;
+  height: 22px;
+}

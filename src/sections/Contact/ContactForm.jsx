@@ -9,6 +9,11 @@ import {
   contactFormRules,
   isBotSubmission,
 } from "@/sections/Contact/contactFormRules.js";
+import SubmissionStatus from "@/sections/Contact/SubmissionStatus.jsx";
+import {
+  SUBMISSION_STATUS,
+  useContactSubmission,
+} from "@/sections/Contact/useContactSubmission.js";
 import Button from "@/shared/ui/Button/Button.jsx";
 import TextField from "@/shared/ui/TextField/TextField.jsx";
 import styles from "./ContactForm.module.css";
@@ -18,11 +23,14 @@ const ERROR_VALUES = {
   messageMin: MESSAGE_MIN_LENGTH,
 };
 
-function ContactForm({ onSubmit }) {
+function ContactForm() {
   const { t } = useTranslation();
+  const { status, submit } = useContactSubmission();
+  const isSending = status === SUBMISSION_STATUS.sending;
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm({ mode: "onBlur", defaultValues: contactFormDefaults });
 
@@ -30,12 +38,16 @@ function ContactForm({ onSubmit }) {
     return errors[field] && t(errors[field].message, ERROR_VALUES);
   }
 
-  function submitValidForm(values) {
+  async function submitValidForm(values) {
     if (isBotSubmission(values)) {
       return;
     }
 
-    onSubmit?.(values);
+    const wasSent = await submit(values);
+
+    if (wasSent) {
+      reset();
+    }
   }
 
   return (
@@ -79,8 +91,14 @@ function ContactForm({ onSubmit }) {
       </div>
       <div className={styles.footer}>
         <p className={styles.note}>{t("contact.form.copyNote")}</p>
-        <Button className={styles.submit} type="submit" iconRight={Send}>
-          {t("contact.form.submit")}
+        <SubmissionStatus status={status} />
+        <Button
+          className={styles.submit}
+          type="submit"
+          iconRight={Send}
+          disabled={isSending}
+        >
+          {isSending ? t("contact.form.sending") : t("contact.form.submit")}
         </Button>
       </div>
     </form>

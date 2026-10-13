@@ -45,6 +45,12 @@
       "honeypot": "Leave this field empty",
       "copyNote": "You get a copy by email",
       "submit": "Send message",
+      "sending": "Sending…",
+      "status": {
+        "success": "Message sent. You will get a copy by email.",
+        "error": "Could not send right now. Try again or use one of the contact links.",
+        "cooldown": "Wait {{seconds}} seconds before sending another message."
+      },
       "errors": {
         "name": "Enter your name, with at least {{nameMin}} letters.",
         "email": "Enter a valid email address.",

@@ -45,6 +45,12 @@
       "honeypot": "Não preencha este campo",
       "copyNote": "Você recebe uma cópia por e-mail",
       "submit": "Enviar mensagem",
+      "sending": "Enviando…",
+      "status": {
+        "success": "Mensagem enviada. Você vai receber uma cópia por e-mail.",
+        "error": "Não foi possível enviar agora. Tente de novo ou use um dos links de contato.",
+        "cooldown": "Aguarde {{seconds}} segundos antes de enviar outra mensagem."
+      },
       "errors": {
         "name": "Digite seu nome, com pelo menos {{nameMin}} letras.",
         "email": "Digite um e-mail válido.",
