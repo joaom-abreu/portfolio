@@ -21,6 +21,14 @@
     "resume": "Currículo",
     "scrollHint": "Role para explorar"
   },
+  "resume": {
+    "title": "Currículo",
+    "documentLanguage": "Idioma do currículo",
+    "openInNewTab": "Abrir em nova aba",
+    "download": "Baixar PDF",
+    "close": "Fechar",
+    "frameTitle": "Currículo em PDF"
+  },
   "about": {
     "stackTitle": "Stack"
   },

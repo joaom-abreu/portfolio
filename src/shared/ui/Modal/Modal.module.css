@@ -1,0 +1,23 @@
+.dialog {
+  width: min(880px, calc(100% - var(--space-12)));
+  max-width: none;
+  height: min(820px, calc(100% - var(--space-12)));
+  max-height: none;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  color: var(--text);
+  box-shadow: var(--shadow-modal);
+}
+
+.dialog::backdrop {
+  background: var(--scrim);
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}

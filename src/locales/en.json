@@ -21,6 +21,14 @@
     "resume": "Résumé",
     "scrollHint": "Scroll to explore"
   },
+  "resume": {
+    "title": "Résumé",
+    "documentLanguage": "Résumé language",
+    "openInNewTab": "Open in new tab",
+    "download": "Download PDF",
+    "close": "Close",
+    "frameTitle": "Résumé in PDF"
+  },
   "about": {
     "stackTitle": "Stack"
   },

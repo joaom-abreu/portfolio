@@ -2,6 +2,11 @@ export const DEFAULT_LANGUAGE = "pt";
 export const SUPPORTED_LANGUAGES = ["pt", "en"];
 export const LANGUAGE_QUERY_PARAM = "lang";
 
+export const LANGUAGE_OPTIONS = SUPPORTED_LANGUAGES.map((language) => ({
+  value: language,
+  label: language.toUpperCase(),
+}));
+
 const DOCUMENT_LANGUAGES = {
   pt: "pt-BR",
   en: "en",

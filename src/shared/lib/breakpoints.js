@@ -1,1 +1,4 @@
-export const DESKTOP_NAV_MEDIA_QUERY = "(min-width: 768px)";
+const TABLET_UP_MEDIA_QUERY = "(min-width: 768px)";
+
+export const DESKTOP_NAV_MEDIA_QUERY = TABLET_UP_MEDIA_QUERY;
+export const RESUME_MODAL_MEDIA_QUERY = TABLET_UP_MEDIA_QUERY;
