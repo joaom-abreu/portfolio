@@ -34,6 +34,24 @@
     "education": "Education",
     "letsTalk": "Let's talk?"
   },
+  "contact": {
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "What should I call you?",
+      "email": "Email",
+      "emailPlaceholder": "you@company.com",
+      "message": "Message",
+      "messagePlaceholder": "Tell me briefly about the role or project",
+      "honeypot": "Leave this field empty",
+      "copyNote": "You get a copy by email",
+      "submit": "Send message",
+      "errors": {
+        "name": "Enter your name, with at least {{nameMin}} letters.",
+        "email": "Enter a valid email address.",
+        "message": "Write at least {{messageMin}} characters."
+      }
+    }
+  },
   "footer": {
     "copyright": "© {{year}} João Mário Abreu · React + Vite · Vercel",
     "designSystem": "Design system",
