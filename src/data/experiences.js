@@ -17,8 +17,8 @@ export const experiences = [
       en: "PUC Minas · Software Engineering",
     },
     description: {
-      pt: "[Uma ou duas frases: o que você faz na monitoria, para quantos alunos, que tipo de dúvida resolve.]",
-      en: "[One or two sentences: what you do as a teaching assistant, for how many students, what kind of questions you answer.]",
+      pt: "Apoio estudantes de graduação na disciplina de Computabilidade, ajudando-os a compreender o conteúdo e a resolver exercícios.",
+      en: "Support undergraduate students in the Theory of Computation course, helping them understand the course content and work through exercises.",
     },
   },
   {
