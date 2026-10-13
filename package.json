@@ -11,11 +11,13 @@
     "test": "vitest run",
     "format": "prettier --write .",
     "docker:up": "docker compose --env-file .env.local up --build -d",
+    "docker:dev": "docker compose --env-file .env.local -f compose.dev.yaml up --build",
     "docker:down": "docker compose --env-file .env.local down",
     "docker:logs": "docker compose --env-file .env.local logs -f"
   },
   "dependencies": {
     "@emailjs/browser": "^5.0.3",
+    "express": "^5.3.0",
     "i18next": "^26.4.4",
     "lucide-react": "^1.55.0",
     "react": "^19.2.8",

@@ -1,0 +1,33 @@
+name: portfolio-dev
+
+services:
+  api:
+    build:
+      context: .
+      target: deps
+    command: node --watch server/index.js
+    env_file:
+      - .env.local
+    expose:
+      - "3001"
+    volumes:
+      - .:/app:z
+      - node_modules:/app/node_modules
+
+  vite:
+    build:
+      context: .
+      target: deps
+    command: npm run dev -- --host
+    environment:
+      API_PROXY_TARGET: http://api:3001
+    ports:
+      - "5173:5173"
+    volumes:
+      - .:/app:z
+      - node_modules:/app/node_modules
+    depends_on:
+      - api
+
+volumes:
+  node_modules:
