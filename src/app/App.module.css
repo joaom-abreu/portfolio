@@ -1,0 +1,11 @@
+.toolbar {
+  display: flex;
+  justify-content: flex-end;
+  padding: var(--space-3) var(--space-4);
+}
+
+@media (min-width: 768px) {
+  .toolbar {
+    padding-inline: var(--space-8);
+  }
+}
