@@ -3,6 +3,8 @@
 > [!WARNING]
 > 🚧 Projeto em desenvolvimento.
 
+🔗 **Site publicado:** [joaoabreu.vercel.app](https://joaoabreu.vercel.app)
+
 ---
 
 ## ✨ Funcionalidades Previstas
