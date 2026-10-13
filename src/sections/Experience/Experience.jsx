@@ -7,18 +7,18 @@ const GROUP_DEFINITIONS = [
   {
     id: "roles",
     labelKey: "experience.roles",
-    kinds: [EXPERIENCE_KIND.work, EXPERIENCE_KIND.next],
+    kind: EXPERIENCE_KIND.work,
   },
   {
     id: "education",
     labelKey: "experience.education",
-    kinds: [EXPERIENCE_KIND.education],
+    kind: EXPERIENCE_KIND.education,
   },
 ];
 
 const groups = GROUP_DEFINITIONS.map((group) => ({
   ...group,
-  items: experiences.filter((item) => group.kinds.includes(item.kind)),
+  items: experiences.filter((item) => item.kind === group.kind),
 }));
 
 function Experience() {

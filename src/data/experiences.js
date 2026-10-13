@@ -1,6 +1,5 @@
 export const EXPERIENCE_KIND = {
   work: "work",
-  next: "next",
   education: "education",
 };
 
@@ -21,17 +20,6 @@ export const experiences = [
       pt: "[Uma ou duas frases: o que você faz na monitoria, para quantos alunos, que tipo de dúvida resolve.]",
       en: "[One or two sentences: what you do as a teaching assistant, for how many students, what kind of questions you answer.]",
     },
-  },
-  {
-    id: "first-internship",
-    kind: EXPERIENCE_KIND.next,
-    period: "2027",
-    role: {
-      pt: "Próximo capítulo: primeiro estágio",
-      en: "Next chapter: first internship",
-    },
-    organization: null,
-    description: { pt: "Backend ou dados.", en: "Backend or data." },
   },
   {
     id: "software-engineering-degree",
