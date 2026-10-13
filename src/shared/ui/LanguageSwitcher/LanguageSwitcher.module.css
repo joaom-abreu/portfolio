@@ -1,0 +1,26 @@
+.group {
+  display: inline-flex;
+  padding: var(--space-1);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-md);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.06em;
+}
+
+.option {
+  padding: var(--space-2) var(--space-3);
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--text-muted);
+  letter-spacing: inherit;
+  cursor: pointer;
+}
+
+.option[aria-pressed="true"] {
+  background: var(--accent-soft);
+  color: var(--accent);
+}

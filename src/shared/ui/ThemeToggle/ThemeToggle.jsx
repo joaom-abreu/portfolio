@@ -1,16 +1,15 @@
 import { Moon, Sun } from "lucide-react";
-import messages from "@/locales/pt.json";
+import { useTranslation } from "react-i18next";
 import { useTheme } from "@/shared/hooks/useTheme.js";
 import { DARK_THEME } from "@/shared/lib/theme.js";
 import styles from "./ThemeToggle.module.css";
 
 function ThemeToggle() {
+  const { t } = useTranslation();
   const { theme, toggleTheme } = useTheme();
   const isDark = theme === DARK_THEME;
   const Icon = isDark ? Sun : Moon;
-  const label = isDark
-    ? messages.theme.switchToLight
-    : messages.theme.switchToDark;
+  const label = isDark ? t("theme.switchToLight") : t("theme.switchToDark");
 
   return (
     <button
