@@ -11,4 +11,7 @@ export default defineConfig({
       "@": sourceDirectory,
     },
   },
+  test: {
+    include: ["src/**/*.test.js", "api/**/*.test.js"],
+  },
 });
