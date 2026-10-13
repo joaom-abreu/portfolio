@@ -9,6 +9,21 @@
   gap: var(--space-8);
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  .inner {
+    opacity: 0;
+    transform: translateY(var(--space-3));
+    transition:
+      opacity 0.25s ease-out,
+      transform 0.25s ease-out;
+  }
+
+  .revealed {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 @media (min-width: 768px) {
   .section {
     padding-block: var(--space-24);
