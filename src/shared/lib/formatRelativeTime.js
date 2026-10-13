@@ -14,7 +14,13 @@ const UNITS = [
 ];
 
 const SMALLEST_UNIT = "second";
+const COMPACT_UNITS = ["hour", "minute"];
+const NUMBER_UNIT_GAP = /(\d)\s+(?=\p{L})/u;
 const FORMAT_OPTIONS = { numeric: "auto", style: "narrow" };
+
+function joinNumberAndUnit(text) {
+  return text.replace(NUMBER_UNIT_GAP, "$1");
+}
 
 export function formatRelativeTime(date, language, now = Date.now()) {
   const formatter = new Intl.RelativeTimeFormat(language, FORMAT_OPTIONS);
@@ -25,5 +31,8 @@ export function formatRelativeTime(date, language, now = Date.now()) {
     return formatter.format(0, SMALLEST_UNIT);
   }
 
-  return formatter.format(-Math.trunc(elapsed / match.duration), match.unit);
+  const amount = -Math.trunc(elapsed / match.duration);
+  const text = formatter.format(amount, match.unit);
+
+  return COMPACT_UNITS.includes(match.unit) ? joinNumberAndUnit(text) : text;
 }
