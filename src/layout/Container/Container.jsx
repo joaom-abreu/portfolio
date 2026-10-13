@@ -1,7 +1,8 @@
+import { joinClassNames } from "@/shared/lib/classNames.js";
 import styles from "./Container.module.css";
 
 function Container({ className, children }) {
-  const classNames = [styles.container, className].filter(Boolean).join(" ");
+  const classNames = joinClassNames(styles.container, className);
 
   return <div className={classNames}>{children}</div>;
 }

@@ -1,24 +1,22 @@
 import { useTranslation } from "react-i18next";
 import { SUPPORTED_LANGUAGES } from "@/shared/lib/language.js";
-import styles from "./LanguageSwitcher.module.css";
+import SegmentedControl from "@/shared/ui/SegmentedControl/SegmentedControl.jsx";
+
+const LANGUAGE_OPTIONS = SUPPORTED_LANGUAGES.map((language) => ({
+  value: language,
+  label: language.toUpperCase(),
+}));
 
 function LanguageSwitcher() {
   const { t, i18n } = useTranslation();
 
   return (
-    <div className={styles.group} role="group" aria-label={t("language.label")}>
-      {SUPPORTED_LANGUAGES.map((language) => (
-        <button
-          key={language}
-          type="button"
-          className={styles.option}
-          aria-pressed={language === i18n.resolvedLanguage}
-          onClick={() => i18n.changeLanguage(language)}
-        >
-          {language.toUpperCase()}
-        </button>
-      ))}
-    </div>
+    <SegmentedControl
+      label={t("language.label")}
+      options={LANGUAGE_OPTIONS}
+      value={i18n.resolvedLanguage}
+      onChange={(language) => i18n.changeLanguage(language)}
+    />
   );
 }
 
