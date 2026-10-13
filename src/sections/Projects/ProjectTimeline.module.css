@@ -1,0 +1,52 @@
+.timeline {
+  --marker-size: 16px;
+  --line-width: 2px;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  padding-inline-start: var(--space-8);
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: var(--space-2);
+  bottom: var(--space-2);
+  inset-inline-start: calc((var(--marker-size) - var(--line-width)) / 2);
+  width: var(--line-width);
+  background: var(--border);
+}
+
+.item {
+  position: relative;
+}
+
+.marker {
+  position: absolute;
+  top: var(--space-1);
+  inset-inline-start: calc(-1 * var(--space-8));
+  width: var(--marker-size);
+  height: var(--marker-size);
+  border: var(--line-width) solid var(--accent);
+  border-radius: var(--radius-full);
+  background: var(--bg);
+}
+
+.upcoming {
+  border-style: dashed;
+  border-color: var(--border-strong);
+}
+
+.date {
+  display: block;
+  margin-bottom: var(--space-3);
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}

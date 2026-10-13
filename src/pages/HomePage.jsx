@@ -3,9 +3,11 @@ import { sections } from "@/data/sections.js";
 import Section from "@/layout/Section/Section.jsx";
 import About from "@/sections/About/About.jsx";
 import Hero from "@/sections/Hero/Hero.jsx";
+import Projects from "@/sections/Projects/Projects.jsx";
 
 const SECTION_CONTENT = {
   sobre: About,
+  projetos: Projects,
 };
 
 function HomePage() {

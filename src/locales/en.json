@@ -24,6 +24,11 @@
   "about": {
     "stackTitle": "Stack"
   },
+  "projects": {
+    "repository": "Repository",
+    "liveSite": "Live site",
+    "mediaPlaceholder": "coming soon"
+  },
   "footer": {
     "copyright": "© {{year}} João Mário Abreu · React + Vite · Vercel",
     "designSystem": "Design system",

@@ -1,0 +1,17 @@
+.media {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--surface-2);
+  object-fit: cover;
+}
+
+.placeholder {
+  display: grid;
+  place-items: center;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 16px;
+}

@@ -1,0 +1,19 @@
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.icon {
+  flex: none;
+  width: 16px;
+  height: 16px;
+}
