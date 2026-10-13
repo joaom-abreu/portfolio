@@ -30,3 +30,7 @@ export const contacts = [
     href: `https://github.com/${GITHUB_USERNAME}`,
   },
 ];
+
+export function findContact(id) {
+  return contacts.find((contact) => contact.id === id);
+}

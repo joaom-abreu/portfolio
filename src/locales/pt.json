@@ -17,6 +17,10 @@
     "experience": "Experiência",
     "contact": "Contato"
   },
+  "hero": {
+    "resume": "Currículo",
+    "scrollHint": "Role para explorar"
+  },
   "footer": {
     "copyright": "© {{year}} João Mário Abreu · React + Vite · Vercel",
     "designSystem": "Design system",

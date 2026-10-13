@@ -1,0 +1,7 @@
+.string {
+  color: var(--text);
+}
+
+.number {
+  color: var(--info);
+}

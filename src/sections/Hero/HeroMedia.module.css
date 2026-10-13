@@ -1,0 +1,38 @@
+.media {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 440px;
+}
+
+.photo {
+  align-self: flex-end;
+  width: 100%;
+  max-width: 180px;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  background: var(--surface-2);
+  object-fit: cover;
+}
+
+.card {
+  position: relative;
+  align-self: flex-start;
+  width: 270px;
+  max-width: 100%;
+  margin-top: calc(-1 * var(--space-16));
+  box-shadow: var(--shadow-modal);
+}
+
+@media (min-width: 768px) {
+  .photo {
+    max-width: 260px;
+  }
+
+  .card {
+    width: 340px;
+    margin-top: calc(-1 * var(--space-24));
+  }
+}

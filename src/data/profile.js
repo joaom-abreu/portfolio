@@ -1,5 +1,6 @@
 export const profile = {
   name: "João Mário Abreu",
+  photo: "/images/photo.webp",
   eyebrow: {
     pt: "Engenharia de Software · PUC Minas",
     en: "Software Engineering · PUC Minas",
