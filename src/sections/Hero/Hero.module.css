@@ -16,6 +16,7 @@
 
 .media {
   order: -1;
+  align-self: flex-end;
 }
 
 .eyebrow {
@@ -70,6 +71,7 @@
   .media {
     flex: 0 1 440px;
     order: 0;
+    align-self: auto;
   }
 
   .scrollHint {
