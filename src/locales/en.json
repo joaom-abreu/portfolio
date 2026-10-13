@@ -21,6 +21,9 @@
     "resume": "Résumé",
     "scrollHint": "Scroll to explore"
   },
+  "about": {
+    "stackTitle": "Stack"
+  },
   "footer": {
     "copyright": "© {{year}} João Mário Abreu · React + Vite · Vercel",
     "designSystem": "Design system",

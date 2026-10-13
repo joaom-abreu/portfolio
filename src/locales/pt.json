@@ -21,6 +21,9 @@
     "resume": "Currículo",
     "scrollHint": "Role para explorar"
   },
+  "about": {
+    "stackTitle": "Stack"
+  },
   "footer": {
     "copyright": "© {{year}} João Mário Abreu · React + Vite · Vercel",
     "designSystem": "Design system",

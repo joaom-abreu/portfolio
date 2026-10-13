@@ -1,7 +1,12 @@
 import { useTranslation } from "react-i18next";
 import { sections } from "@/data/sections.js";
 import Section from "@/layout/Section/Section.jsx";
+import About from "@/sections/About/About.jsx";
 import Hero from "@/sections/Hero/Hero.jsx";
+
+const SECTION_CONTENT = {
+  sobre: About,
+};
 
 function HomePage() {
   const { t } = useTranslation();
@@ -9,14 +14,20 @@ function HomePage() {
   return (
     <>
       <Hero />
-      {sections.map((section) => (
-        <Section
-          key={section.id}
-          id={section.id}
-          number={section.number}
-          title={t(section.titleKey)}
-        />
-      ))}
+      {sections.map((section) => {
+        const Content = SECTION_CONTENT[section.id];
+
+        return (
+          <Section
+            key={section.id}
+            id={section.id}
+            number={section.number}
+            title={t(section.titleKey)}
+          >
+            {Content && <Content />}
+          </Section>
+        );
+      })}
     </>
   );
 }
