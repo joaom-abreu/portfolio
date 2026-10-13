@@ -7,7 +7,9 @@
     "label": "Idioma"
   },
   "nav": {
-    "label": "Seções"
+    "label": "Seções",
+    "openMenu": "Abrir menu",
+    "closeMenu": "Fechar menu"
   },
   "sections": {
     "about": "Sobre mim",

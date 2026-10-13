@@ -4,3 +4,5 @@ export const sections = [
   { id: "experiencia", number: "03", titleKey: "sections.experience" },
   { id: "contato", number: "04", titleKey: "sections.contact" },
 ];
+
+export const sectionIds = sections.map((section) => section.id);
