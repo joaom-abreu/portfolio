@@ -1,21 +1,7 @@
-# 💼 Portfólio · João Mário Abreu
-
-> [!NOTE]
-> Portfólio pessoal de João Mário Abreu, estudante de Engenharia de Software na PUC Minas com foco em backend e dados. Uma página única, em português e inglês, que reúne projetos, experiência e formas de contato.
+# 💼 Portfólio
 
 > [!WARNING]
-> 🚧 Projeto em construção. Este README descreve o que está planejado e é atualizado a cada etapa.
-
----
-
-## 📝 Sobre o Projeto
-
-Este repositório guarda o portfólio pessoal de João Mário Abreu. Ele nasceu como o **LAB01 da disciplina DIAW**, na PUC Minas, e segue como projeto pessoal depois da entrega.
-
-- **Por que ele existe:** para apresentar em um só lugar quem é o João, o que ele já construiu e como falar com ele, com o primeiro estágio como próximo passo.
-- **Qual problema ele resolve:** o currículo em PDF e o perfil do GitHub mostram cada um só uma parte da história. O portfólio junta os projetos em uma linha do tempo, a atividade real no GitHub, a formação e o contato.
-- **Qual o contexto:** acadêmico, como laboratório da disciplina, e pessoal, como vitrine profissional.
-- **O que o torna interessante:** além da interface, o projeto tem backend próprio. Os dados do GitHub e o contador de visitas passam por uma API do próprio portfólio, e a aplicação inteira também roda em Docker Compose.
+> 🚧 Projeto em desenvolvimento.
 
 ---
 
