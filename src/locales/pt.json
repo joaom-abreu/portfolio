@@ -29,6 +29,11 @@
     "liveSite": "Ver online",
     "mediaPlaceholder": "em breve"
   },
+  "experience": {
+    "roles": "Atuação",
+    "education": "Formação",
+    "letsTalk": "Vamos conversar?"
+  },
   "footer": {
     "copyright": "© {{year}} João Mário Abreu · React + Vite · Vercel",
     "designSystem": "Design system",
