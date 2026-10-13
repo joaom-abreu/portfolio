@@ -5,5 +5,19 @@
   },
   "language": {
     "label": "Idioma"
+  },
+  "nav": {
+    "label": "Seções"
+  },
+  "sections": {
+    "about": "Sobre mim",
+    "projects": "Projetos",
+    "experience": "Experiência",
+    "contact": "Contato"
+  },
+  "footer": {
+    "copyright": "© {{year}} João Mário Abreu · React + Vite · Vercel",
+    "designSystem": "Design system",
+    "backToTop": "Voltar ao topo"
   }
 }

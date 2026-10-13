@@ -1,17 +1,16 @@
 import ThemeProvider from "@/app/providers/ThemeProvider.jsx";
-import LanguageSwitcher from "@/shared/ui/LanguageSwitcher/LanguageSwitcher.jsx";
-import ThemeToggle from "@/shared/ui/ThemeToggle/ThemeToggle.jsx";
-import styles from "./App.module.css";
+import Footer from "@/layout/Footer/Footer.jsx";
+import Header from "@/layout/Header/Header.jsx";
+import HomePage from "@/pages/HomePage.jsx";
 
 function App() {
   return (
     <ThemeProvider>
+      <Header />
       <main>
-        <div className={styles.toolbar}>
-          <LanguageSwitcher />
-          <ThemeToggle />
-        </div>
+        <HomePage />
       </main>
+      <Footer />
     </ThemeProvider>
   );
 }

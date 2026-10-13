@@ -1,0 +1,27 @@
+.section {
+  padding-block: var(--space-16);
+  border-top: 1px solid var(--border);
+  scroll-margin-top: var(--header-height);
+}
+
+.inner {
+  display: grid;
+  gap: var(--space-8);
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding-block: var(--space-24);
+  }
+}
+
+@media (min-width: 1024px) {
+  .section {
+    padding-block: var(--space-32);
+  }
+
+  .inner {
+    grid-template-columns: var(--label-column) minmax(0, 1fr);
+    gap: var(--space-12);
+  }
+}
