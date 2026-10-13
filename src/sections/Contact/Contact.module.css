@@ -1,0 +1,23 @@
+.contact {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.links {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-2);
+}
+
+@media (min-width: 768px) {
+  .contact {
+    grid-template-columns: minmax(0, 7fr) minmax(0, 9fr);
+    align-items: start;
+    gap: var(--space-8);
+  }
+
+  .links {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-3);
+  }
+}

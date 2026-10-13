@@ -1,7 +1,8 @@
 import { useTranslation } from "react-i18next";
-import { sections } from "@/data/sections.js";
+import { CONTACT_SECTION_ID, sections } from "@/data/sections.js";
 import Section from "@/layout/Section/Section.jsx";
 import About from "@/sections/About/About.jsx";
+import Contact from "@/sections/Contact/Contact.jsx";
 import Experience from "@/sections/Experience/Experience.jsx";
 import Hero from "@/sections/Hero/Hero.jsx";
 import Projects from "@/sections/Projects/Projects.jsx";
@@ -10,6 +11,7 @@ const SECTION_CONTENT = {
   sobre: About,
   projetos: Projects,
   experiencia: Experience,
+  [CONTACT_SECTION_ID]: Contact,
 };
 
 function HomePage() {

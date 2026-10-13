@@ -1,18 +1,14 @@
-import { FileText, Mail } from "lucide-react";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FileText } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { findContact } from "@/data/contacts.js";
 import { useLocalize } from "@/shared/hooks/useLocalize.js";
 import { getLinkProps } from "@/shared/lib/externalLink.js";
 import Button from "@/shared/ui/Button/Button.jsx";
+import { CONTACT_ICONS } from "@/shared/ui/contactIcons.js";
 import IconButton from "@/shared/ui/IconButton/IconButton.jsx";
 import styles from "./HeroActions.module.css";
 
-const SOCIAL_LINKS = [
-  { contact: findContact("github"), icon: FaGithub },
-  { contact: findContact("linkedin"), icon: FaLinkedin },
-  { contact: findContact("email"), icon: Mail },
-];
+const SOCIAL_CONTACTS = ["github", "linkedin", "email"].map(findContact);
 
 function HeroActions() {
   const { t } = useTranslation();
@@ -21,13 +17,13 @@ function HeroActions() {
   return (
     <div className={styles.actions}>
       <ul className={styles.links}>
-        {SOCIAL_LINKS.map(({ contact, icon }) => (
+        {SOCIAL_CONTACTS.map((contact) => (
           <li key={contact.id}>
             <IconButton
-              icon={icon}
+              icon={CONTACT_ICONS[contact.id]}
               label={localize(contact.label)}
-              href={contact.href}
-              {...getLinkProps(contact.href)}
+              href={localize(contact.href)}
+              {...getLinkProps(localize(contact.href))}
             />
           </li>
         ))}

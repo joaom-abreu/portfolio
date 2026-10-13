@@ -1,8 +1,16 @@
-const EMAIL_ADDRESS = "[seu e-mail]";
-const WHATSAPP_NUMBER = "[55319xxxxxxxx]";
-const WHATSAPP_DISPLAY_NUMBER = "[+55 31 9xxxx-xxxx]";
+const EMAIL_ADDRESS = "abreujoaomr@gmail.com";
+const WHATSAPP_NUMBER = "5531975292283";
+const WHATSAPP_DISPLAY_NUMBER = "+55 31 97529-2283";
+const WHATSAPP_MESSAGE = {
+  pt: "Olá, João! Vi seu portfólio e gostaria de conversar.",
+  en: "Hi, João! I saw your portfolio and would like to talk.",
+};
 const LINKEDIN_HANDLE = "joao-mario-abreu";
 const GITHUB_USERNAME = "joaom-abreu";
+
+function buildWhatsAppUrl(message) {
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+}
 
 export const contacts = [
   {
@@ -15,7 +23,10 @@ export const contacts = [
     id: "whatsapp",
     label: "WhatsApp",
     value: WHATSAPP_DISPLAY_NUMBER,
-    href: `https://wa.me/${WHATSAPP_NUMBER}`,
+    href: {
+      pt: buildWhatsAppUrl(WHATSAPP_MESSAGE.pt),
+      en: buildWhatsAppUrl(WHATSAPP_MESSAGE.en),
+    },
   },
   {
     id: "linkedin",
