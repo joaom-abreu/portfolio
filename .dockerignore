@@ -1,0 +1,10 @@
+.env*
+node_modules
+dist
+docs
+CLAUDE.md
+.git
+.github
+.idea
+.vscode
+*.log

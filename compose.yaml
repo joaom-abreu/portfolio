@@ -1,0 +1,7 @@
+services:
+  web:
+    build:
+      context: .
+      target: web
+    ports:
+      - "8080:80"
