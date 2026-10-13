@@ -7,13 +7,7 @@ import {
   SUPPORTED_LANGUAGES,
   applyDocumentLanguage,
   readLanguageFromUrl,
-  writeLanguageToUrl,
 } from "@/shared/lib/language.js";
-
-function syncLanguage(language) {
-  applyDocumentLanguage(language);
-  writeLanguageToUrl(language);
-}
 
 i18next.use(initReactI18next).init({
   resources: {
@@ -27,7 +21,7 @@ i18next.use(initReactI18next).init({
   initAsync: false,
 });
 
-syncLanguage(i18next.language);
-i18next.on("languageChanged", syncLanguage);
+applyDocumentLanguage(i18next.language);
+i18next.on("languageChanged", applyDocumentLanguage);
 
 export default i18next;

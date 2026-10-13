@@ -21,5 +21,9 @@
     "copyright": "© {{year}} João Mário Abreu · React + Vite · Vercel",
     "designSystem": "Design system",
     "backToTop": "Voltar ao topo"
+  },
+  "design": {
+    "title": "Design system",
+    "comingSoon": "Em construção."
   }
 }

@@ -1,5 +1,7 @@
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 import { sections } from "@/data/sections.js";
+import { getSectionLocation } from "@/shared/lib/routes.js";
 import LanguageSwitcher from "@/shared/ui/LanguageSwitcher/LanguageSwitcher.jsx";
 import styles from "./MobileMenu.module.css";
 
@@ -12,9 +14,9 @@ function MobileMenu({ id, activeSectionId, onNavigate }) {
         <ul className={styles.links}>
           {sections.map((section) => (
             <li key={section.id}>
-              <a
+              <Link
                 className={styles.link}
-                href={`#${section.id}`}
+                to={getSectionLocation(section.id)}
                 aria-current={
                   section.id === activeSectionId ? "true" : undefined
                 }
@@ -22,7 +24,7 @@ function MobileMenu({ id, activeSectionId, onNavigate }) {
               >
                 <span className={styles.number}>{section.number}</span>
                 {t(section.titleKey)}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>

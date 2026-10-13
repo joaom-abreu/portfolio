@@ -1,5 +1,7 @@
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 import { sections } from "@/data/sections.js";
+import { getSectionLocation } from "@/shared/lib/routes.js";
 import styles from "./HeaderNav.module.css";
 
 function HeaderNav({ activeSectionId }) {
@@ -10,14 +12,14 @@ function HeaderNav({ activeSectionId }) {
       <ul className={styles.links}>
         {sections.map((section) => (
           <li key={section.id}>
-            <a
+            <Link
               className={styles.link}
-              href={`#${section.id}`}
+              to={getSectionLocation(section.id)}
               aria-current={section.id === activeSectionId ? "true" : undefined}
             >
               <span className={styles.number}>{section.number}</span>
               {t(section.titleKey)}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>

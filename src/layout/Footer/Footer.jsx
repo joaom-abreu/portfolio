@@ -1,6 +1,8 @@
 import { ArrowUp } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 import Container from "@/layout/Container/Container.jsx";
+import { ROUTES, TOP_LOCATION } from "@/shared/lib/routes.js";
 import styles from "./Footer.module.css";
 
 const CURRENT_YEAR = new Date().getFullYear();
@@ -15,13 +17,13 @@ function Footer() {
           {t("footer.copyright", { year: CURRENT_YEAR })}
         </p>
         <div className={styles.links}>
-          <a className={styles.link} href="/design">
+          <Link className={styles.link} to={ROUTES.design}>
             {t("footer.designSystem")}
-          </a>
-          <a className={styles.link} href="#top">
+          </Link>
+          <Link className={styles.link} to={TOP_LOCATION}>
             {t("footer.backToTop")}
             <ArrowUp className={styles.icon} aria-hidden="true" />
-          </a>
+          </Link>
         </div>
       </Container>
     </footer>
