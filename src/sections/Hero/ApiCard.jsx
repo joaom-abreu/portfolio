@@ -10,7 +10,7 @@ const KEY_SEPARATOR = ": ";
 const LINE_END = "\n";
 const LINE_END_WITH_COMMA = ",\n";
 
-function ApiCard({ method, path, status, body, className }) {
+function ApiCard({ method, path, status, tone, body, className }) {
   const entries = Object.entries(body);
   const lastIndex = entries.length - 1;
 
@@ -19,7 +19,9 @@ function ApiCard({ method, path, status, body, className }) {
       <div className={styles.bar}>
         <span className={styles.method}>{method}</span>
         {path}
-        <span className={styles.status}>{status}</span>
+        <span className={joinClassNames(styles.status, styles[tone])}>
+          {status}
+        </span>
       </div>
       <pre className={styles.body}>
         {OBJECT_START}

@@ -19,7 +19,11 @@
   },
   "hero": {
     "resume": "Currículo",
-    "scrollHint": "Role para explorar"
+    "scrollHint": "Role para explorar",
+    "api": {
+      "loading": "carregando",
+      "offline": "offline"
+    }
   },
   "resume": {
     "title": "Currículo",

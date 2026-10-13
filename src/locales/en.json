@@ -19,7 +19,11 @@
   },
   "hero": {
     "resume": "Résumé",
-    "scrollHint": "Scroll to explore"
+    "scrollHint": "Scroll to explore",
+    "api": {
+      "loading": "loading",
+      "offline": "offline"
+    }
   },
   "resume": {
     "title": "Résumé",

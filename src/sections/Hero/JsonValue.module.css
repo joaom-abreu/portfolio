@@ -5,3 +5,7 @@
 .number {
   color: var(--info);
 }
+
+.pending {
+  color: var(--text-muted);
+}

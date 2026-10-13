@@ -29,8 +29,19 @@
 
 .status {
   margin-inline-start: auto;
-  color: var(--success);
   white-space: nowrap;
+}
+
+.success {
+  color: var(--success);
+}
+
+.muted {
+  color: var(--text-muted);
+}
+
+.danger {
+  color: var(--danger);
 }
 
 .body {
