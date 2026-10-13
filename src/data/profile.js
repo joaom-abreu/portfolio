@@ -39,14 +39,5 @@ export const profile = {
       label: { pt: "Ferramentas", en: "Tools" },
       items: ["Git", "Linux", "Docker", "IntelliJ"],
     },
-    {
-      id: "spoken-languages",
-      label: { pt: "Idiomas", en: "Spoken languages" },
-      items: [
-        { pt: "Português · nativo", en: "Portuguese · native" },
-        { pt: "Inglês · C1", en: "English · C1" },
-        { pt: "Mandarim · básico", en: "Mandarin · basic" },
-      ],
-    },
   ],
 };

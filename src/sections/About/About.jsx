@@ -23,10 +23,7 @@ function About() {
         <ul className={styles.groups}>
           {profile.stack.map((group) => (
             <li key={group.id}>
-              <StackGroup
-                label={localize(group.label)}
-                items={group.items.map(localize)}
-              />
+              <StackGroup label={localize(group.label)} items={group.items} />
             </li>
           ))}
         </ul>
