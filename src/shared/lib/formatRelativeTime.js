@@ -14,7 +14,7 @@ const UNITS = [
 ];
 
 const SMALLEST_UNIT = "second";
-const COMPACT_UNITS = ["hour", "minute"];
+const COMPACT_UNIT = "hour";
 const NUMBER_UNIT_GAP = /(\d)\s+(?=\p{L})/u;
 const FORMAT_OPTIONS = { numeric: "auto", style: "narrow" };
 
@@ -34,5 +34,5 @@ export function formatRelativeTime(date, language, now = Date.now()) {
   const amount = -Math.trunc(elapsed / match.duration);
   const text = formatter.format(amount, match.unit);
 
-  return COMPACT_UNITS.includes(match.unit) ? joinNumberAndUnit(text) : text;
+  return match.unit === COMPACT_UNIT ? joinNumberAndUnit(text) : text;
 }

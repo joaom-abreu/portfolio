@@ -6,7 +6,7 @@ const NOW = "2026-10-13T12:00:00Z";
 describe("formatRelativeTime", () => {
   it.each([
     ["2026-10-13T11:59:30Z", "pt", "agora"],
-    ["2026-10-13T11:55:00Z", "pt", "há 5min."],
+    ["2026-10-13T11:55:00Z", "pt", "há 5 min."],
     ["2026-10-13T10:00:00Z", "pt", "há 2h"],
     ["2026-10-12T12:00:00Z", "pt", "ontem"],
     ["2026-10-10T12:00:00Z", "pt", "há 3 dias"],
@@ -34,7 +34,11 @@ describe("formatRelativeTime", () => {
     expect(formatRelativeTime(date, "en", now)).toBe("2h ago");
   });
 
-  it("keeps the space before units that are written out", () => {
+  it("removes the space only between the number and the hour unit", () => {
+    expect(formatRelativeTime("2026-10-13T10:00:00Z", "pt", NOW)).toBe("há 2h");
+    expect(formatRelativeTime("2026-10-13T11:55:00Z", "pt", NOW)).toBe(
+      "há 5 min.",
+    );
     expect(formatRelativeTime("2026-10-10T12:00:00Z", "pt", NOW)).toBe(
       "há 3 dias",
     );
