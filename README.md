@@ -1,18 +1,10 @@
-# 💼 Portfólio · João Mário Abreu
-
-> [!NOTE]
-> Portfólio pessoal em React com back-end próprio: mostra quem eu sou, meus projetos e minha atividade no GitHub com dados ao vivo, em português e inglês.
+# 💼 Portfólio
 
 <table>
   <tr>
     <td width="800px">
       <div align="justify">
-        Este é o meu <b>portfólio pessoal</b>, feito no <b>LAB01</b> da disciplina de <i>Desenvolvimento de Interfaces Web</i> (DIAW) da <b>Engenharia de Software da PUC Minas</b>. A página única apresenta quem eu sou, minha stack, meus projetos, minha experiência e um formulário de contato. Os dados do GitHub, o contador de visitas e o card de API do topo vêm de <b>funções serverless próprias</b> na Vercel, com o banco no <b>Supabase</b>. O site funciona em <i>dois idiomas</i> e <i>dois temas</i>, segue um <b>design system</b> próprio, publicado na rota <code>/design</code>, e também roda inteiro em <b>Docker Compose</b>.
-      </div>
-    </td>
-    <td>
-      <div>
-        <img src="./public/favicon.svg" alt="Logo do portfólio: as iniciais JM sobre um quadrado roxo" width="120px"/>
+        Este é o meu <b>portfólio pessoal. A página única apresenta quem eu sou, minha stack, meus projetos, minha experiência e um formulário de contato. Os dados do GitHub, o contador de visitas e o card de API do topo vêm de <b>funções serverless próprias</b> na Vercel, com o banco no <b>Supabase</b>. O site funciona em <i>dois idiomas</i> e <i>dois temas</i>, segue um <b>design system</b> próprio, publicado na rota <code>/design</code>, e também roda inteiro em <b>Docker Compose</b>.
       </div>
     </td>
   </tr>
