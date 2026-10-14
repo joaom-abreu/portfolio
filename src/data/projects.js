@@ -33,7 +33,7 @@ export const projects = sortByDate([
     },
     tags: ["React", "Vite", "JavaScript", "Vercel", "Supabase"],
     repoUrl: "https://github.com/joaom-abreu/portfolio",
-    liveUrl: "https://joaoabreu.vercel.app",
+    liveUrl: "https://joaomario.dev",
     media: null,
   },
   {

@@ -3,7 +3,7 @@
 > [!WARNING]
 > 🚧 Projeto em desenvolvimento.
 
-🔗 **Site publicado:** [joaoabreu.vercel.app](https://joaoabreu.vercel.app)
+🔗 **Site publicado:** [joaomario.dev](https://joaomario.dev)
 
 ---
 
