@@ -37,7 +37,7 @@ export const profile = {
     {
       id: "databases",
       label: { pt: "Bancos de dados", en: "Databases" },
-      items: ["PostgreSQL", "MongoDB", "Supabase"],
+      items: ["PostgreSQL", "MongoDB"],
     },
     {
       id: "tools",
