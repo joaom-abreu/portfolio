@@ -71,7 +71,7 @@
       "email": "Email",
       "emailPlaceholder": "you@company.com",
       "message": "Message",
-      "messagePlaceholder": "Tell me briefly about the role or project",
+      "messagePlaceholder": "What would you like to talk about?",
       "honeypot": "Leave this field empty",
       "copyNote": "You get a copy by email",
       "submit": "Send message",
