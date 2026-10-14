@@ -1,0 +1,22 @@
+name: Keep Supabase awake
+
+on:
+  schedule:
+    - cron: "17 */12 * * *"
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  ping:
+    name: Call the health endpoint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Request /api/health
+        env:
+          SITE_URL: ${{ vars.SITE_URL }}
+        run: |
+          : "${SITE_URL:?The SITE_URL repository variable is not set}"
+          curl --fail --silent --show-error --location \
+            --retry 3 --retry-delay 10 --max-time 30 \
+            "${SITE_URL%/}/api/health"
