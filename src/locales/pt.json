@@ -95,6 +95,28 @@
   },
   "design": {
     "title": "Design system",
-    "comingSoon": "Em construção."
+    "intro": "Os tokens, a tipografia e os componentes que constroem este site. Os valores são lidos do <file>tokens.css</file> enquanto a página roda, então nunca ficam desatualizados.",
+    "onThisPage": "Nesta página",
+    "sections": {
+      "colors": "Cores",
+      "typography": "Tipografia",
+      "spacing": "Espaçamento",
+      "radius": "Raios",
+      "spacingAndRadius": "Espaçamento e raios",
+      "components": "Componentes",
+      "breakpoints": "Breakpoints"
+    },
+    "colors": {
+      "note": "Contraste WCAG 2 · texto ≥ 4.5 · controles ≥ 3",
+      "token": "Token",
+      "dark": "Escuro",
+      "light": "Claro",
+      "usage": "Uso",
+      "contrast": "Contraste",
+      "white": "branco"
+    },
+    "components": {
+      "cancel": "Cancelar"
+    }
   }
 }

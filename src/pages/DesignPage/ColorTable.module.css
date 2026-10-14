@@ -1,0 +1,51 @@
+.card {
+  --table-min-width: 600px;
+
+  overflow-x: auto;
+  padding: var(--space-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+}
+
+.table {
+  width: 100%;
+  min-width: var(--table-min-width);
+  border-collapse: collapse;
+  text-align: start;
+}
+
+.table th,
+.table td {
+  padding: var(--space-4) var(--space-3);
+  text-align: start;
+  vertical-align: middle;
+}
+
+.table thead th {
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.table tbody tr {
+  border-top: 1px solid var(--border);
+}
+
+.name {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  white-space: nowrap;
+}
+
+.usage {
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 22px;
+}
