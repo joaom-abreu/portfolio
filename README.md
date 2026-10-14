@@ -417,6 +417,7 @@ Para rodar a versão de produção fora da Vercel, use a [Opção 3](#-opção-3
 ├── db/migrations/              # 📜 SQL versionado do banco (001_page_views.sql).
 ├── docker/nginx.conf           # 🧭 Nginx: SPA, proxy de /api e cache.
 ├── docs/
+│   ├── og-image/               # 🖼️ Página que gera a imagem de Open Graph.
 │   ├── screenshots/            # 📸 Capturas do site usadas neste README.
 │   └── wireframes/             # 🖼️ Wireframe de referência (wireframe.png).
 ├── public/
@@ -464,6 +465,14 @@ Para rodar a versão de produção fora da Vercel, use a [Opção 3](#-opção-3
 ```
 
 Cada componente é uma pasta com `Nome.jsx` e `Nome.module.css`, e os testes ficam ao lado do arquivo testado.
+
+### 🖼️ Imagem de Open Graph
+
+A imagem que aparece ao compartilhar o link (`public/images/og-image.png`, 1200×630) é gerada pela página em [`docs/og-image/`](./docs/og-image). Ela usa os mesmos tokens, fontes e componentes do site e lê o eyebrow, o nome e a frase de `src/data/profile.js`, então acompanha qualquer mudança no hero. Ela não entra no build.
+
+1. Rode `npm run dev` e abra **http://localhost:5173/docs/og-image/**.
+2. Capture o elemento `<main>` (1200×630) com a ferramenta de captura do navegador. No Firefox, use **Ctrl+Shift+S**; no Chrome, abra o DevTools, selecione o `<main>` e use **Capture node screenshot**.
+3. Salve como `public/images/og-image.png`. Se o texto mudar, atualize também o `og:image:alt` do `index.html`.
 
 ---
 

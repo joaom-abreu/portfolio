@@ -1,0 +1,62 @@
+.canvas {
+  --og-width: 1200px;
+  --og-height: 630px;
+  --og-card-width: 400px;
+  --og-card-zoom: 1.43;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) var(--og-card-width);
+  align-items: center;
+  gap: var(--space-16);
+  width: var(--og-width);
+  height: var(--og-height);
+  padding-inline: calc(var(--space-16) + var(--space-2));
+  overflow: hidden;
+  background: var(--bg);
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.eyebrow {
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.name {
+  font-size: 84px;
+  font-weight: 600;
+  line-height: 88px;
+  letter-spacing: -0.03em;
+}
+
+.tagline p {
+  font-size: 30px;
+  line-height: 44px;
+}
+
+.site {
+  margin-top: var(--space-6);
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 32px;
+}
+
+.cardSlot {
+  width: var(--og-card-width);
+}
+
+.card {
+  zoom: var(--og-card-zoom);
+  box-shadow: var(--shadow-modal);
+}
