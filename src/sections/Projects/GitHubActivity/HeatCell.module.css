@@ -1,0 +1,26 @@
+.cell {
+  display: block;
+  width: var(--heat-cell-size);
+  height: var(--heat-cell-size);
+  background: var(--surface-2);
+}
+
+.cell[data-level="1"] {
+  background: var(--heat-1);
+}
+
+.cell[data-level="2"] {
+  background: var(--heat-2);
+}
+
+.cell[data-level="3"] {
+  background: var(--heat-3);
+}
+
+.cell[data-level="4"] {
+  background: var(--heat-4);
+}
+
+.blank {
+  visibility: hidden;
+}

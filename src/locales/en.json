@@ -39,7 +39,22 @@
   "projects": {
     "repository": "Repository",
     "liveSite": "Live site",
-    "mediaPlaceholder": "coming soon"
+    "mediaPlaceholder": "coming soon",
+    "activity": {
+      "title": "GitHub activity",
+      "viewProfile": "View profile",
+      "total_one": "contribution in the last 12 months",
+      "total_other": "contributions in the last 12 months",
+      "less": "Less",
+      "more": "More",
+      "calendarLabel": "GitHub contribution calendar for the last 12 months",
+      "viewActivity": "View activity on GitHub"
+    },
+    "repos": {
+      "title": "Recent repositories",
+      "error": "Couldn't load right now",
+      "viewOnGithub": "view on GitHub"
+    }
   },
   "experience": {
     "roles": "Roles",

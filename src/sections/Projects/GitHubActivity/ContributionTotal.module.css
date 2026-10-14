@@ -1,0 +1,11 @@
+.total {
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  line-height: 20px;
+}
+
+.count {
+  color: var(--text);
+  font-weight: 500;
+}

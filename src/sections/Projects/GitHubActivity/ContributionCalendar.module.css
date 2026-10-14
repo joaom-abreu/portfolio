@@ -1,0 +1,24 @@
+.calendar {
+  --days-in-week: 7;
+
+  display: flex;
+  flex-flow: row-reverse wrap;
+  justify-content: flex-end;
+  gap: var(--space-1);
+  height: calc(
+    var(--days-in-week) * var(--heat-cell-size) + (var(--days-in-week) - 1) *
+      var(--space-1)
+  );
+  overflow: hidden;
+}
+
+.week {
+  display: grid;
+  flex: none;
+  grid-template-rows: repeat(var(--days-in-week), var(--heat-cell-size));
+  gap: var(--space-1);
+}
+
+.loading {
+  composes: pulse from "../../../shared/ui/Skeleton/Skeleton.module.css";
+}

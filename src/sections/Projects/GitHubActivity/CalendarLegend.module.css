@@ -1,0 +1,17 @@
+.legend {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  line-height: 16px;
+}
+
+.label:first-child {
+  margin-inline-end: var(--space-1);
+}
+
+.label:last-child {
+  margin-inline-start: var(--space-1);
+}
