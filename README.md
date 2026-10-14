@@ -56,6 +56,36 @@ React, Vite, ESLint e Prettier já estão instalados. As demais tecnologias entr
 
 ---
 
+## 🗄️ Banco de Dados
+
+O contador de visitas usa uma tabela no Supabase. O navegador nunca acessa o banco: só as funções de `api/` leem e gravam, com a chave de servidor.
+
+### Passo a passo
+
+1. Crie um projeto em [supabase.com](https://supabase.com). Escolha a região mais próxima das funções da Vercel (por padrão, Leste dos EUA).
+2. No painel do projeto, abra o **SQL Editor**, cole o conteúdo de [`db/migrations/001_page_views.sql`](./db/migrations/001_page_views.sql) e clique em **Run**. O arquivo pode ser executado mais de uma vez.
+3. Confira o resultado rodando `select * from public.daily_views(7);`. Devem voltar 7 linhas, uma por dia, com `views` igual a 0.
+4. Em **Project Settings → API**, copie o endereço do projeto e a chave de servidor (`service_role` ou secret key).
+5. Gere o sal do hash dos visitantes com `openssl rand -hex 32`.
+6. Cadastre as três variáveis na Vercel, em Production e Preview, e no seu `.env.local`:
+
+| Variável                    | Valor                               |
+| --------------------------- | ----------------------------------- |
+| `SUPABASE_URL`              | Endereço do projeto                 |
+| `SUPABASE_SERVICE_ROLE_KEY` | Chave de servidor                   |
+| `VIEWS_SALT`                | Resultado do `openssl rand -hex 32` |
+
+> [!IMPORTANT]
+> A chave de servidor ignora o RLS e dá acesso total ao banco. Ela nunca recebe o prefixo `VITE_`, nunca vai para o Git e só é lida em `api/`.
+
+### O que a migration cria
+
+- **`page_views`:** uma linha por visitante por dia, com a data e um hash. O IP não é salvo.
+- **RLS ligado e sem políticas:** a chave pública do Supabase não lê nem grava nada na tabela.
+- **`daily_views(days)`:** função que devolve as visitas dos últimos dias, com zero nos dias sem visita.
+
+---
+
 ## 📂 Estrutura Inicial
 
 ```
