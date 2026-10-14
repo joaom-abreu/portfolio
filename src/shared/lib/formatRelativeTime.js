@@ -6,33 +6,45 @@ const MONTH = 30 * DAY;
 const YEAR = 365 * DAY;
 
 const UNITS = [
-  { unit: "year", duration: YEAR },
-  { unit: "month", duration: MONTH },
-  { unit: "day", duration: DAY },
-  { unit: "hour", duration: HOUR },
-  { unit: "minute", duration: MINUTE },
+  { unit: "year", duration: YEAR, style: "long" },
+  { unit: "month", duration: MONTH, style: "long" },
+  { unit: "day", duration: DAY, style: "long" },
+  { unit: "hour", duration: HOUR, style: "narrow" },
+  { unit: "minute", duration: MINUTE, style: "short" },
 ];
 
-const SMALLEST_UNIT = "second";
+const SMALLEST_UNIT = { unit: "second", style: "narrow" };
 const COMPACT_UNIT = "hour";
+const DOTLESS_LANGUAGE = "en";
 const NUMBER_UNIT_GAP = /(\d)\s+(?=\p{L})/u;
-const FORMAT_OPTIONS = { numeric: "auto", style: "narrow" };
+const ABBREVIATION_DOT = /(\p{L})\./u;
 
 function joinNumberAndUnit(text) {
   return text.replace(NUMBER_UNIT_GAP, "$1");
 }
 
+function dropAbbreviationDot(text) {
+  return text.replace(ABBREVIATION_DOT, "$1");
+}
+
+function formatAmount(amount, { unit, style }, language) {
+  const formatter = new Intl.RelativeTimeFormat(language, {
+    numeric: "auto",
+    style,
+  });
+  const text = formatter.format(amount, unit);
+  const compact = unit === COMPACT_UNIT ? joinNumberAndUnit(text) : text;
+
+  return language === DOTLESS_LANGUAGE ? dropAbbreviationDot(compact) : compact;
+}
+
 export function formatRelativeTime(date, language, now = Date.now()) {
-  const formatter = new Intl.RelativeTimeFormat(language, FORMAT_OPTIONS);
   const elapsed = new Date(now).getTime() - new Date(date).getTime();
   const match = UNITS.find(({ duration }) => Math.abs(elapsed) >= duration);
 
   if (!match) {
-    return formatter.format(0, SMALLEST_UNIT);
+    return formatAmount(0, SMALLEST_UNIT, language);
   }
 
-  const amount = -Math.trunc(elapsed / match.duration);
-  const text = formatter.format(amount, match.unit);
-
-  return match.unit === COMPACT_UNIT ? joinNumberAndUnit(text) : text;
+  return formatAmount(-Math.trunc(elapsed / match.duration), match, language);
 }

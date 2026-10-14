@@ -13,10 +13,12 @@ describe("formatRelativeTime", () => {
     ["2026-08-01T12:00:00Z", "pt", "há 2 meses"],
     ["2024-10-01T12:00:00Z", "pt", "há 2 anos"],
     ["2026-10-13T11:59:30Z", "en", "now"],
-    ["2026-10-13T11:55:00Z", "en", "5m ago"],
+    ["2026-10-13T11:55:00Z", "en", "5 min ago"],
     ["2026-10-13T10:00:00Z", "en", "2h ago"],
     ["2026-10-12T12:00:00Z", "en", "yesterday"],
-    ["2026-10-10T12:00:00Z", "en", "3d ago"],
+    ["2026-10-10T12:00:00Z", "en", "3 days ago"],
+    ["2026-08-01T12:00:00Z", "en", "2 months ago"],
+    ["2024-10-01T12:00:00Z", "en", "2 years ago"],
   ])("formats %s in %s as %s", (date, language, expected) => {
     expect(formatRelativeTime(date, language, NOW)).toBe(expected);
   });
@@ -44,7 +46,19 @@ describe("formatRelativeTime", () => {
     );
   });
 
+  it("drops the abbreviation dot only in English", () => {
+    expect(formatRelativeTime("2026-10-13T11:59:00Z", "en", NOW)).toBe(
+      "1 min ago",
+    );
+    expect(formatRelativeTime("2026-10-13T11:59:00Z", "pt", NOW)).toBe(
+      "há 1 min.",
+    );
+  });
+
   it("formats future dates", () => {
     expect(formatRelativeTime("2026-10-13T15:00:00Z", "en", NOW)).toBe("in 3h");
+    expect(formatRelativeTime("2026-10-13T12:05:00Z", "en", NOW)).toBe(
+      "in 5 min",
+    );
   });
 });
