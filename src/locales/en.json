@@ -1,4 +1,8 @@
 {
+  "meta": {
+    "title": "João Mário Abreu · Portfolio",
+    "description": "Portfolio of João Mário Abreu, a Software Engineering student at PUC Minas, in Belo Horizonte, Brazil. Interested in backend and data engineering."
+  },
   "theme": {
     "switchToLight": "Switch to light theme",
     "switchToDark": "Switch to dark theme"

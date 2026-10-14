@@ -1,4 +1,8 @@
 {
+  "meta": {
+    "title": "João Mário Abreu · Portfólio",
+    "description": "Portfólio de João Mário Abreu, estudante de Engenharia de Software na PUC Minas, em Belo Horizonte. Interessado em backend e engenharia de dados."
+  },
   "theme": {
     "switchToLight": "Mudar para tema claro",
     "switchToDark": "Mudar para tema escuro"

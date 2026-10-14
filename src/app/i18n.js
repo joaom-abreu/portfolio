@@ -1,5 +1,6 @@
 import i18next from "i18next";
 import { initReactI18next } from "react-i18next";
+import { applyDocumentMeta } from "@/app/documentMeta.js";
 import en from "@/locales/en.json";
 import pt from "@/locales/pt.json";
 import {
@@ -21,7 +22,12 @@ i18next.use(initReactI18next).init({
   initAsync: false,
 });
 
-applyDocumentLanguage(i18next.language);
-i18next.on("languageChanged", applyDocumentLanguage);
+function syncDocument(language) {
+  applyDocumentLanguage(language);
+  applyDocumentMeta(i18next.t);
+}
+
+syncDocument(i18next.language);
+i18next.on("languageChanged", syncDocument);
 
 export default i18next;
