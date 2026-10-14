@@ -1,7 +1,7 @@
 import { GITHUB_USERNAME, fetchGithub } from "./githubClient.js";
+import { fetchRepos } from "./repos.js";
 
 const USER_PATH = `/users/${GITHUB_USERNAME}`;
-const REPOS_PATH = `/users/${GITHUB_USERNAME}/repos?per_page=100&sort=pushed`;
 
 function countLanguages(repos) {
   const counts = new Map();
@@ -40,7 +40,7 @@ export function buildProfileSummary(user, repos) {
 export async function getProfileSummary() {
   const [user, repos] = await Promise.all([
     fetchGithub(USER_PATH),
-    fetchGithub(REPOS_PATH),
+    fetchRepos(),
   ]);
 
   return buildProfileSummary(user, repos);
