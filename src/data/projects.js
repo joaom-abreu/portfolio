@@ -20,7 +20,7 @@ export const projects = sortByDate([
     repoUrl: "https://github.com/joaom-abreu/scribd-to-pdf",
     liveUrl: null,
     media: {
-      src: "/projects/scribd-to-pdf.png",
+      src: "/projects/scribd-to-pdf.webp",
       alt: {
         pt: "Janela do Scribd to PDF com os campos de link do documento, destino do PDF e modo de captura, a opção de OCR e o botão Iniciar.",
         en: "Scribd to PDF window with the document link, PDF destination and capture mode fields, the OCR option and the Start button.",
@@ -41,7 +41,7 @@ export const projects = sortByDate([
     repoUrl: "https://github.com/joaom-abreu/portfolio",
     liveUrl: "https://joaomario.dev",
     media: {
-      src: "/projects/portfolio.png",
+      src: "/projects/portfolio.webp",
       alt: {
         pt: "Topo do site de portfólio no tema escuro, com o nome João Mário Abreu, a foto e o card que mostra a resposta de /api/joao.",
         en: "Top of the portfolio website in the dark theme, with the name João Mário Abreu, the photo and the card showing the /api/joao response.",

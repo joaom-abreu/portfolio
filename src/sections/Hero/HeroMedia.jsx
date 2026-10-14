@@ -34,6 +34,7 @@ function HeroMedia({ className }) {
         width={PHOTO_WIDTH}
         height={PHOTO_HEIGHT}
         loading="eager"
+        fetchPriority="high"
       />
       <ApiCard
         className={styles.card}
