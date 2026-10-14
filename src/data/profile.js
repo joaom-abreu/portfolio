@@ -15,12 +15,12 @@ export const profile = {
   },
   about: [
     {
-      pt: "Sou o João, estudante do 2º período de Engenharia de Software na PUC Minas, em Belo Horizonte. Gosto de APIs, bancos de dados e pipelines que transformam dados soltos em algo útil.",
-      en: "I'm João, a second-semester Software Engineering student at PUC Minas, in Belo Horizonte. I like APIs, databases and pipelines that turn scattered data into something useful.",
+      pt: "Sou o João, estudante do 2º período de Engenharia de Software na PUC Minas. Minha maior paixão é o backend: construir APIs, modelar bancos de dados e automatizar tarefas repetitivas. Trabalho principalmente com Java e Python, e recentemente comecei meu primeiro projeto em Go. Atualmente busco meu primeiro estágio na área.",
+      en: "I'm João, a second-semester Software Engineering student at PUC Minas. My biggest passion is backend: building APIs, modeling databases and automating repetitive tasks. I work mainly with Java and Python, and I recently started my first project in Go. I'm currently looking for my first internship in the field.",
     },
     {
-      pt: "Na faculdade programo em Java e Python; por conta própria estudo Go, Docker e SQL. Também sou monitor de Computabilidade. Quero começar um estágio em backend ou dados em 2027 e, mais à frente, trabalhar em uma empresa internacional.",
-      en: "At university I code in Java and Python; on my own I study Go, Docker and SQL. I'm also a teaching assistant for Computability. I want to start a backend or data internship in 2027 and, further ahead, work at an international company.",
+      pt: "Fora do código, sou atleticano de coração, acompanho a NBA e gosto de aviação, geopolítica e literatura.",
+      en: "Outside of code, I'm a die-hard Atlético Mineiro fan, I follow the NBA and I enjoy aviation, geopolitics and literature.",
     },
   ],
   stack: [
