@@ -21,3 +21,11 @@ export async function getJson(path, { signal } = {}) {
 
   return { data, status: response.status, durationMs };
 }
+
+export async function postEmpty(path) {
+  const response = await fetch(path, { method: "POST", headers: JSON_HEADERS });
+
+  if (!response.ok) {
+    throw new ApiError(response.status);
+  }
+}

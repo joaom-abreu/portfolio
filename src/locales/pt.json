@@ -88,7 +88,10 @@
   "footer": {
     "copyright": "© {{year}} João Mário Abreu · React + Vite · Vercel",
     "designSystem": "Design system",
-    "backToTop": "Voltar ao topo"
+    "backToTop": "Voltar ao topo",
+    "visits_zero": "visitas · últimos {{days}} dias",
+    "visits_one": "visita · últimos {{days}} dias",
+    "visits_other": "visitas · últimos {{days}} dias"
   },
   "design": {
     "title": "Design system",

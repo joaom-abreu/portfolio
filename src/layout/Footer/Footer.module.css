@@ -15,6 +15,10 @@
   color: var(--text-muted);
 }
 
+.counter {
+  order: -1;
+}
+
 .links {
   display: flex;
   flex-wrap: wrap;
@@ -41,8 +45,13 @@
 
 @media (min-width: 768px) {
   .inner {
-    flex-direction: row;
+    flex-flow: row wrap;
     align-items: center;
     justify-content: space-between;
+    gap: var(--space-4) var(--space-6);
+  }
+
+  .counter {
+    order: 0;
   }
 }

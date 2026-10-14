@@ -2,6 +2,7 @@ import { ArrowUp } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import Container from "@/layout/Container/Container.jsx";
+import VisitCounter from "@/layout/Footer/VisitCounter.jsx";
 import { ROUTES, TOP_LOCATION } from "@/shared/lib/routes.js";
 import styles from "./Footer.module.css";
 
@@ -16,6 +17,7 @@ function Footer() {
         <p className={styles.copyright}>
           {t("footer.copyright", { year: CURRENT_YEAR })}
         </p>
+        <VisitCounter className={styles.counter} />
         <div className={styles.links}>
           <Link className={styles.link} to={ROUTES.design}>
             {t("footer.designSystem")}

@@ -1,0 +1,14 @@
+.counter {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.total {
+  color: var(--text);
+  font-weight: 500;
+}
