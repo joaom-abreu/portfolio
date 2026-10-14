@@ -21,6 +21,11 @@ export function sendJson(res, body, cachePolicy) {
   res.status(HTTP_STATUS.ok).json(body);
 }
 
+export function sendNoContent(res) {
+  setCachePolicy(res, CACHE_POLICY.none);
+  res.status(HTTP_STATUS.noContent).end();
+}
+
 export function sendError(res, error) {
   const { status, code } = toHttpError(error);
 
