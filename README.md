@@ -4,7 +4,7 @@
   <tr>
     <td width="800px">
       <div align="justify">
-        Este é o meu <b>portfólio pessoal. A página única apresenta quem eu sou, minha stack, meus projetos, minha experiência e um formulário de contato. Os dados do GitHub, o contador de visitas e o card de API do topo vêm de <b>funções serverless próprias</b> na Vercel, com o banco no <b>Supabase</b>. O site funciona em <i>dois idiomas</i> e <i>dois temas</i>, segue um <b>design system</b> próprio, publicado na rota <code>/design</code>, e também roda inteiro em <b>Docker Compose</b>.
+        Este é o meu <b>portfólio pessoal</b>. A página única apresenta quem eu sou, minha stack, meus projetos, minha experiência e um formulário de contato. Os dados do GitHub, o contador de visitas e o card de API do topo vêm de <b>funções serverless próprias</b> na Vercel, com o banco no <b>Supabase</b>. O site funciona em <i>dois idiomas</i> e <i>dois temas</i>, segue um <b>design system</b> próprio, publicado na rota <code>/design</code>, e também roda inteiro em <b>Docker Compose</b>.
       </div>
     </td>
   </tr>
@@ -417,7 +417,6 @@ Para rodar a versão de produção fora da Vercel, use a [Opção 3](#-opção-3
 │   ├── fonts/                  # ✒️ Geist e Geist Mono (woff2) e a licença OFL.
 │   ├── images/                 # 🖼️ Foto e imagem de Open Graph.
 │   ├── projects/               # 🗂️ Imagens dos projetos.
-│   ├── favicon.svg             # 🔖 Ícone do site.
 │   └── robots.txt              # 🤖 Regras para robôs de busca.
 ├── server/                     # 🐳 Express que só monta os handlers de api/ no Docker.
 │   ├── app.js
