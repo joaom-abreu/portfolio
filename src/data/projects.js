@@ -1,11 +1,11 @@
-import { sortByDate } from "@/shared/lib/sortByDate.js";
+import { sortByNewest } from "@/shared/lib/sortByNewest.js";
 
 export const PROJECT_STATUS = {
   published: "published",
   inProgress: "in-progress",
 };
 
-export const projects = sortByDate([
+export const projects = sortByNewest([
   {
     id: "scribd-to-pdf",
     date: "2026-09",
