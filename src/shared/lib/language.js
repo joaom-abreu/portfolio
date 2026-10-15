@@ -17,15 +17,22 @@ export function normalizeLanguage(value) {
   return SUPPORTED_LANGUAGES.includes(language) ? language : DEFAULT_LANGUAGE;
 }
 
-export function readLanguageFromUrl() {
+function readBrowserLanguage() {
+  const [language] = navigator.language?.split("-") ?? [];
+  return normalizeLanguage(language);
+}
+
+export function readInitialLanguage() {
   const searchParams = new URLSearchParams(window.location.search);
-  return normalizeLanguage(searchParams.get(LANGUAGE_QUERY_PARAM));
+  const urlLanguage = searchParams.get(LANGUAGE_QUERY_PARAM);
+
+  return urlLanguage ? normalizeLanguage(urlLanguage) : readBrowserLanguage();
 }
 
 export function writeLanguageToUrl(language) {
   const url = new URL(window.location.href);
 
-  if (language === DEFAULT_LANGUAGE) {
+  if (language === readBrowserLanguage()) {
     url.searchParams.delete(LANGUAGE_QUERY_PARAM);
   } else {
     url.searchParams.set(LANGUAGE_QUERY_PARAM, language);

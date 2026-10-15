@@ -7,7 +7,7 @@ import {
   DEFAULT_LANGUAGE,
   SUPPORTED_LANGUAGES,
   applyDocumentLanguage,
-  readLanguageFromUrl,
+  readInitialLanguage,
 } from "@/shared/lib/language.js";
 
 i18next.use(initReactI18next).init({
@@ -15,7 +15,7 @@ i18next.use(initReactI18next).init({
     pt: { translation: pt },
     en: { translation: en },
   },
-  lng: readLanguageFromUrl(),
+  lng: readInitialLanguage(),
   fallbackLng: DEFAULT_LANGUAGE,
   supportedLngs: SUPPORTED_LANGUAGES,
   interpolation: { escapeValue: false },
