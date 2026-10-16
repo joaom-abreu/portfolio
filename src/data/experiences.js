@@ -10,7 +10,7 @@ export const experiences = [
     period: { pt: "Out 2026 — Dez 2026", en: "Oct 2026 — Dec 2026" },
     role: {
       pt: "Monitor de Computabilidade",
-      en: "Teaching Assistant, Theory of Computation",
+      en: "Teaching Assistant, Computability",
     },
     organization: {
       pt: "PUC Minas · Engenharia de Software",
@@ -18,7 +18,7 @@ export const experiences = [
     },
     description: {
       pt: "Apoio estudantes de graduação na disciplina de Computabilidade, ajudando-os a compreender o conteúdo e a resolver exercícios.",
-      en: "Support undergraduate students in the Theory of Computation course, helping them understand the course content and work through exercises.",
+      en: "Support undergraduate students in the Computability course, helping them understand the course content and work through exercises.",
     },
   },
   {
