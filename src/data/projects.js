@@ -13,17 +13,17 @@ export const projects = sortByNewest([
     status: PROJECT_STATUS.published,
     title: { pt: "Scribd to PDF", en: "Scribd to PDF" },
     description: {
-      pt: "Aplicativo em Python que usa o Playwright para capturar cada página exibida no leitor do Scribd e reuni-las em um único PDF, na ordem correta. Retoma capturas interrompidas e pode aplicar OCR para deixar o texto pesquisável. Funciona pela interface gráfica em Tkinter ou pelo terminal.",
-      en: "A Python app that uses Playwright to capture each page shown in the Scribd reader and merge them into a single PDF in the correct order. It resumes interrupted captures and can run OCR to make the text searchable. It works through a Tkinter GUI or the command line.",
+      pt: "Ferramenta de linha de comando em Python que usa o Playwright para capturar cada página exibida no leitor do Scribd e reuni-las em um único PDF, na ordem correta. Retoma capturas interrompidas, gera o PDF de novo sem reabrir o navegador e pode aplicar OCR para deixar o texto pesquisável. O código é organizado em camadas e coberto por testes em pytest.",
+      en: "A Python command-line tool that uses Playwright to capture each page shown in the Scribd reader and merge them into a single PDF in the correct order. It resumes interrupted captures, rebuilds the PDF without reopening the browser and can run OCR to make the text searchable. The code is organized in layers and covered by pytest tests.",
     },
-    tags: ["Python", "Playwright", "Tkinter", "OCRmyPDF", "pytest"],
+    tags: ["Python", "Playwright", "img2pdf", "OCRmyPDF", "pytest"],
     repoUrl: "https://github.com/joaom-abreu/scribd-to-pdf",
     liveUrl: null,
     media: {
       src: "/projects/scribd-to-pdf.webp",
       alt: {
-        pt: "Janela do Scribd to PDF com os campos de link do documento, destino do PDF e modo de captura, a opção de OCR e o botão Iniciar.",
-        en: "Scribd to PDF window with the document link, PDF destination and capture mode fields, the OCR option and the Start button.",
+        pt: "Terminal rodando o scribd-to-pdf: o documento é aberto, as páginas são capturadas uma a uma e o caminho do PDF salvo aparece no final.",
+        en: "Terminal running scribd-to-pdf: the document is opened, the pages are captured one by one and the path of the saved PDF appears at the end.",
       },
     },
   },
