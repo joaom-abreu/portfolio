@@ -66,4 +66,36 @@ export const projects = sortByNewest([
     liveUrl: null,
     media: null,
   },
+  {
+    id: "conci",
+    date: "2026-10",
+    dateLabel: {
+      pt: "2026 · em desenvolvimento",
+      en: "2026 · in development",
+    },
+    status: PROJECT_STATUS.inProgress,
+    title: { pt: "Cônci", en: "Cônci" },
+    description: {
+      pt: "Plataforma web, feita em equipe na PUC Minas, que conecta clientes a prestadores de serviços autônomos, com busca por categoria, agenda do prestador, acompanhamento do serviço e avaliações. A API usa o RESTHeart sobre o MongoDB Atlas, em Docker Compose, e o front é feito em React com TypeScript e Material UI.",
+      en: "A web platform, built as a team at PUC Minas, that connects clients with independent service providers, with search by category, a provider schedule, service tracking and reviews. The API runs RESTHeart on MongoDB Atlas with Docker Compose, and the front end is built with React, TypeScript and Material UI.",
+    },
+    tags: [
+      "Spring Boot",
+      "MongoDB",
+      "RESTHeart",
+      "Docker",
+      "React",
+      "TypeScript",
+    ],
+    repoUrl:
+      "https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2026-2-ti2-7600100-Conci",
+    liveUrl: null,
+    media: {
+      src: "/projects/conci.webp",
+      alt: {
+        pt: "Logo do Cônci em fundo azul-marinho: uma mão dourada aponta para o acento do nome, com a frase “Um concierge para todos”.",
+        en: "Cônci logo on a navy background: a golden hand points at the accent of the name, above the phrase “Um concierge para todos” (A concierge for everyone).",
+      },
+    },
+  },
 ]);
