@@ -7,6 +7,27 @@ export const PROJECT_STATUS = {
 
 export const projects = sortByNewest([
   {
+    id: "car-rental-system",
+    date: "2026-11",
+    dateLabel: { pt: "2026 · novembro", en: "2026 · November" },
+    status: PROJECT_STATUS.published,
+    title: { pt: "Sistema de Aluguel de Carros", en: "Car Rental System" },
+    description: {
+      pt: "Sistema web de aluguel de carros, feito para uma disciplina da PUC Minas. Clientes fazem pedidos de aluguel, e agentes (uma locadora e um banco) avaliam os pedidos e executam os contratos, que podem vir com crédito do banco. A API em Spring Boot usa Spring Security com JWT e o Supabase como banco, o front é feito em React, e o projeto tem testes em JUnit e Mockito, CI no GitHub Actions e diagramas UML alinhados ao código.",
+      en: "A web system for renting cars, built for a course at PUC Minas. Clients place rental requests, and agents (a rental company and a bank) evaluate them and execute the contracts, which may include credit from the bank. The Spring Boot API uses Spring Security with JWT and Supabase as the database, the front end is built with React, and the project has JUnit and Mockito tests, CI on GitHub Actions and UML diagrams kept in line with the code.",
+    },
+    tags: ["Java", "Spring Boot", "Spring Security", "Supabase", "React"],
+    repoUrl: "https://github.com/joaom-abreu/car-rental-system",
+    liveUrl: "https://aluguel-carros.vercel.app",
+    media: {
+      src: "/projects/car-rental-system.webp",
+      alt: {
+        pt: "Tela de pedidos do sistema de aluguel de carros, com cinco pedidos e os status Cancelado, Em análise, Aprovado, Reprovado e Contratado.",
+        en: "Requests page of the car rental system, with five requests and the statuses Cancelado, Em análise, Aprovado, Reprovado and Contratado (Canceled, Under review, Approved, Rejected and Contracted).",
+      },
+    },
+  },
+  {
     id: "scribd-to-pdf",
     date: "2026-09",
     dateLabel: { pt: "2026 · setembro", en: "2026 · September" },
