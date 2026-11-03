@@ -40,13 +40,7 @@ export const projects = sortByNewest([
     tags: ["Python", "Playwright", "img2pdf", "OCRmyPDF", "pytest"],
     repoUrl: "https://github.com/joaom-abreu/scribd-to-pdf",
     liveUrl: null,
-    media: {
-      src: "/projects/scribd-to-pdf.webp",
-      alt: {
-        pt: "Terminal rodando o scribd-to-pdf: o documento é aberto, as páginas são capturadas uma a uma e o caminho do PDF salvo aparece no final.",
-        en: "Terminal running scribd-to-pdf: the document is opened, the pages are captured one by one and the path of the saved PDF appears at the end.",
-      },
-    },
+    media: null,
   },
   {
     id: "portfolio",
