@@ -15,8 +15,8 @@ export const profile = {
   },
   about: [
     {
-      pt: "Sou o João, estudante do 2º período de Engenharia de Software na PUC Minas. Minha maior paixão é o backend: construir APIs, modelar bancos de dados e automatizar tarefas repetitivas. Trabalho principalmente com Java e Python, e recentemente comecei meu primeiro projeto em Go. Atualmente busco meu primeiro estágio na área.",
-      en: "I'm João, a second-semester Software Engineering student at PUC Minas. My biggest passion is backend: building APIs, modeling databases and automating repetitive tasks. I work mainly with Java and Python, and I recently started my first project in Go. I'm currently looking for my first internship in the field.",
+      pt: "Sou o João, estudante de Engenharia de Software na PUC Minas, com foco em backend e dados. Na faculdade, criei projetos em Java e Python e, por conta própria, estou desenvolvendo meu primeiro projeto em Go. Atualmente busco meu primeiro estágio na área.",
+      en: "I'm João, a Software Engineering student at PUC Minas focused on backend and data. At university, I built projects in Java and Python, and on my own I'm developing my first project in Go. I'm currently looking for my first internship in the area.",
     },
     {
       pt: "Fora do código, sou atleticano de coração, acompanho a NBA e gosto de aviação, geopolítica e literatura.",
