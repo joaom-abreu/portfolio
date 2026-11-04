@@ -15,11 +15,11 @@
 ## 🚧 Status do Projeto
 
 [![CI](https://img.shields.io/github/actions/workflow/status/joaom-abreu/portfolio/ci.yml?branch=main&label=CI)](https://github.com/joaom-abreu/portfolio/actions/workflows/ci.yml)
-[![Versão](https://img.shields.io/badge/Versão-v1.0.0-blue)](https://github.com/joaom-abreu/portfolio/releases)
-[![Licença](https://img.shields.io/github/license/joaom-abreu/portfolio)](#-licença)
+[![Versão](https://img.shields.io/badge/Versão-v1.0.0-7c4dff)](https://github.com/joaom-abreu/portfolio/releases)
+[![Licença](https://img.shields.io/github/license/joaom-abreu/portfolio?color=7c4dff)](#-licença)
 [![Site](https://img.shields.io/website?url=https%3A%2F%2Fwww.joaomario.dev&label=joaomario.dev)](https://www.joaomario.dev)
 
-![React](https://img.shields.io/badge/React-19-007ec6?style=for-the-badge&logo=react&logoColor=white) ![Vite](https://img.shields.io/badge/Vite-8-007ec6?style=for-the-badge&logo=vite&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-ESM-007ec6?style=for-the-badge&logo=javascript&logoColor=white) ![Node.js](https://img.shields.io/badge/Node.js-22-007ec6?style=for-the-badge&logo=nodedotjs&logoColor=white) ![Vercel](https://img.shields.io/badge/Vercel-Functions-007ec6?style=for-the-badge&logo=vercel&logoColor=white) ![Supabase](https://img.shields.io/badge/Supabase-PostgreSQL-007ec6?style=for-the-badge&logo=supabase&logoColor=white) ![Docker](https://img.shields.io/badge/Docker-Compose-007ec6?style=for-the-badge&logo=docker&logoColor=white) ![Vitest](https://img.shields.io/badge/Vitest-5-007ec6?style=for-the-badge&logo=vitest&logoColor=white) ![GitHub last commit](https://img.shields.io/github/last-commit/joaom-abreu/portfolio?style=for-the-badge&logo=git&logoColor=white&color=007ec6)
+![React](https://img.shields.io/badge/React-19-7c4dff?style=for-the-badge&logo=react&logoColor=white) ![Vite](https://img.shields.io/badge/Vite-8-7c4dff?style=for-the-badge&logo=vite&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-ESM-7c4dff?style=for-the-badge&logo=javascript&logoColor=white) ![Node.js](https://img.shields.io/badge/Node.js-22-7c4dff?style=for-the-badge&logo=nodedotjs&logoColor=white) ![Vercel](https://img.shields.io/badge/Vercel-Functions-7c4dff?style=for-the-badge&logo=vercel&logoColor=white) ![Supabase](https://img.shields.io/badge/Supabase-PostgreSQL-7c4dff?style=for-the-badge&logo=supabase&logoColor=white) ![Docker](https://img.shields.io/badge/Docker-Compose-7c4dff?style=for-the-badge&logo=docker&logoColor=white) ![Vitest](https://img.shields.io/badge/Vitest-5-7c4dff?style=for-the-badge&logo=vitest&logoColor=white) ![GitHub last commit](https://img.shields.io/github/last-commit/joaom-abreu/portfolio?style=for-the-badge&logo=git&logoColor=white&color=7c4dff)
 
 ---
 
