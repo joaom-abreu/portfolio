@@ -43,7 +43,6 @@
   "projects": {
     "repository": "Repository",
     "liveSite": "Live site",
-    "mediaPlaceholder": "coming soon",
     "activity": {
       "title": "GitHub activity",
       "viewProfile": "View profile",

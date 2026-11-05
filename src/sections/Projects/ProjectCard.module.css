@@ -38,4 +38,8 @@
     gap: var(--space-6);
     padding: var(--space-6);
   }
+
+  .cardWithoutMedia {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }

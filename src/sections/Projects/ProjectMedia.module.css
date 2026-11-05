@@ -6,12 +6,3 @@
   background: var(--surface-2);
   object-fit: cover;
 }
-
-.placeholder {
-  display: grid;
-  place-items: center;
-  color: var(--text-muted);
-  font-family: var(--font-mono);
-  font-size: 12px;
-  line-height: 16px;
-}
