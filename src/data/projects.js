@@ -91,8 +91,8 @@ export const projects = sortByNewest([
     status: PROJECT_STATUS.inProgress,
     title: { pt: "Cônci", en: "Cônci" },
     description: {
-      pt: "Plataforma web, feita em equipe na PUC Minas, que conecta clientes a prestadores de serviços autônomos, com busca por categoria, agenda do prestador, acompanhamento do serviço e avaliações. A API usa o RESTHeart sobre o MongoDB Atlas, em Docker Compose, e o front é feito em React com TypeScript e Material UI.",
-      en: "A web platform, built as a team at PUC Minas, that connects clients with independent service providers, with search by category, a provider schedule, service tracking and reviews. The API runs RESTHeart on MongoDB Atlas with Docker Compose, and the front end is built with React, TypeScript and Material UI.",
+      pt: "Plataforma web, feita em equipe na PUC Minas, que conecta clientes a prestadores de serviços autônomos, com busca por categoria, agenda do prestador, acompanhamento do serviço e avaliações. A API usa Spring Boot e RESTHeart sobre o MongoDB Atlas, em Docker Compose, e o front é feito em React com TypeScript e Material UI.",
+      en: "A web platform, built as a team at PUC Minas, that connects clients with independent service providers, with search by category, a provider schedule, service tracking and reviews. The API uses Spring Boot and RESTHeart on MongoDB Atlas with Docker Compose, and the front end is built with React, TypeScript and Material UI.",
     },
     tags: [
       "Spring Boot",
