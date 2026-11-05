@@ -261,9 +261,9 @@ curl https://www.joaomario.dev/api/joao
 
 ```json
 {
-  "public_repos": 11,
+  "public_repos": 13,
   "top_language": "Python",
-  "last_push": "2026-10-14T17:12:44Z"
+  "last_push": "2026-11-05T02:23:31Z"
 }
 ```
 
