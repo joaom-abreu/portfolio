@@ -7,7 +7,7 @@ export const experiences = [
   {
     id: "computability-teaching-assistant",
     kind: EXPERIENCE_KIND.work,
-    period: { pt: "Out 2026 — Dez 2026", en: "Oct 2026 — Dec 2026" },
+    period: { pt: "Set 2026 — Dez 2026", en: "Sep 2026 — Dec 2026" },
     role: {
       pt: "Monitor de Computabilidade",
       en: "Teaching Assistant, Computability",
