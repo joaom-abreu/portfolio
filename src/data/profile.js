@@ -19,8 +19,8 @@ export const profile = {
       en: "I'm João, a Software Engineering student at PUC Minas focused on backend and data. At university, I built projects in Java and Python, and on my own I'm developing my first project in Go. I'm currently looking for my first internship in the area.",
     },
     {
-      pt: "Fora do código, sou atleticano de coração, acompanho a NBA e gosto de aviação, geopolítica e literatura.",
-      en: "Outside of code, I'm a die-hard Atlético Mineiro fan, I follow the NBA and I enjoy aviation, geopolitics and literature.",
+      pt: "Fora do código, sou atleticano de coração, acompanho a NBA e gosto de video games, música e literatura.",
+      en: "Outside of code, I'm a die-hard Atlético Mineiro fan, I watch the NBA and I enjoy video games, music and literature.",
     },
   ],
   stack: [
