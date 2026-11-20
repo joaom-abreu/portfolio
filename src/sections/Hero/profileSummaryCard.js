@@ -10,14 +10,14 @@ const DURATION_UNIT = "ms";
 
 const PENDING_BODY = {
   public_repos: undefined,
-  top_language: undefined,
+  building: undefined,
   last_push: undefined,
 };
 
 function buildBody(summary, language) {
   return {
     public_repos: summary.public_repos,
-    top_language: summary.top_language,
+    building: summary.building,
     last_push:
       summary.last_push && formatRelativeTime(summary.last_push, language),
   };

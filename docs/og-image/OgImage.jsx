@@ -12,7 +12,7 @@ import styles from "./OgImage.module.css";
 const SITE_HOST = "joaomario.dev";
 const SAMPLE_STATUS = "● 200 OK";
 const SAMPLE_PUBLIC_REPOS = 11;
-const SAMPLE_TOP_LANGUAGE = "Python";
+const SAMPLE_BUILDING = "courtside-api";
 const MILLISECONDS_PER_HOUR = 60 * 60 * 1000;
 const SAMPLE_PUSH_AGE_HOURS = 2;
 const SAMPLE_PUSH_DATE = 0;
@@ -22,7 +22,7 @@ function buildSampleBody(language) {
 
   return {
     public_repos: SAMPLE_PUBLIC_REPOS,
-    top_language: SAMPLE_TOP_LANGUAGE,
+    building: SAMPLE_BUILDING,
     last_push: formatRelativeTime(SAMPLE_PUSH_DATE, language, now),
   };
 }

@@ -1,12 +1,13 @@
 import { describe, expect, it } from "vitest";
+import { GITHUB_USERNAME } from "./githubClient.js";
 import { buildProfileSummary } from "./profileSummary.js";
 
 const USER = { public_repos: 4 };
 
 function createRepo(overrides) {
   return {
+    name: "courtside-api",
     fork: false,
-    language: "Java",
     pushed_at: "2026-10-01T00:00:00Z",
     ...overrides,
   };
@@ -18,57 +19,55 @@ describe("buildProfileSummary", () => {
 
     expect(summary).toEqual({
       public_repos: 4,
-      top_language: "Java",
+      building: "courtside-api",
       last_push: "2026-10-01T00:00:00Z",
     });
   });
 
-  it("ignores forks when choosing the top language", () => {
+  it("ignores forks", () => {
     const repos = [
-      createRepo({ language: "Go" }),
-      createRepo({ language: "Java", fork: true }),
-      createRepo({ language: "Java", fork: true }),
+      createRepo({ name: "own-repo", pushed_at: "2026-10-01T00:00:00Z" }),
+      createRepo({
+        name: "forked-repo",
+        fork: true,
+        pushed_at: "2026-10-12T00:00:00Z",
+      }),
     ];
 
-    expect(buildProfileSummary(USER, repos).top_language).toBe("Go");
+    expect(buildProfileSummary(USER, repos).building).toBe("own-repo");
   });
 
-  it("chooses the most frequent language", () => {
+  it("ignores the profile repository and the portfolio", () => {
     const repos = [
-      createRepo({ language: "Go" }),
-      createRepo({ language: "Python" }),
-      createRepo({ language: "Python" }),
-      createRepo({ language: null }),
+      createRepo({ name: "own-repo", pushed_at: "2026-10-01T00:00:00Z" }),
+      createRepo({ name: GITHUB_USERNAME, pushed_at: "2026-10-12T00:00:00Z" }),
+      createRepo({ name: "portfolio", pushed_at: "2026-10-11T00:00:00Z" }),
     ];
 
-    expect(buildProfileSummary(USER, repos).top_language).toBe("Python");
+    expect(buildProfileSummary(USER, repos).building).toBe("own-repo");
   });
 
-  it("keeps the first language when counts are tied", () => {
+  it("picks the most recently pushed repository and its push date", () => {
     const repos = [
-      createRepo({ language: "Go" }),
-      createRepo({ language: "Python" }),
+      createRepo({ name: "older", pushed_at: "2026-09-30T10:00:00Z" }),
+      createRepo({ name: "newest", pushed_at: "2026-10-12T04:52:00Z" }),
+      createRepo({ name: "middle", pushed_at: "2026-10-02T08:00:00Z" }),
+    ];
+    const summary = buildProfileSummary(USER, repos);
+
+    expect(summary.building).toBe("newest");
+    expect(summary.last_push).toBe("2026-10-12T04:52:00Z");
+  });
+
+  it("returns null fields when there is no valid repository", () => {
+    const repos = [
+      createRepo({ name: "portfolio" }),
+      createRepo({ name: "forked-repo", fork: true }),
     ];
 
-    expect(buildProfileSummary(USER, repos).top_language).toBe("Go");
-  });
-
-  it("picks the most recent push", () => {
-    const repos = [
-      createRepo({ pushed_at: "2026-09-30T10:00:00Z" }),
-      createRepo({ pushed_at: "2026-10-12T04:52:00Z" }),
-      createRepo({ pushed_at: "2026-10-02T08:00:00Z" }),
-    ];
-
-    expect(buildProfileSummary(USER, repos).last_push).toBe(
-      "2026-10-12T04:52:00Z",
-    );
-  });
-
-  it("returns null fields when there are no repositories", () => {
-    expect(buildProfileSummary({ public_repos: 0 }, [])).toEqual({
-      public_repos: 0,
-      top_language: null,
+    expect(buildProfileSummary({ public_repos: 2 }, repos)).toEqual({
+      public_repos: 2,
+      building: null,
       last_push: null,
     });
   });

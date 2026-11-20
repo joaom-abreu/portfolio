@@ -263,7 +263,7 @@ curl https://www.joaomario.dev/api/joao
 ```json
 {
   "public_repos": 13,
-  "top_language": "Python",
+  "building": "courtside-api",
   "last_push": "2026-11-05T02:23:31Z"
 }
 ```
