@@ -27,8 +27,52 @@
   letter-spacing: -0.01em;
 }
 
-.description {
+.summary {
+  color: var(--text);
+}
+
+.role {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.roleLabel {
   color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.highlights {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.highlight {
+  --line-height: 24px;
+  --marker-size: 6px;
+
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  color: var(--text-muted);
+  font-size: 15px;
+  line-height: var(--line-height);
+}
+
+.highlight::before {
+  content: "";
+  flex-shrink: 0;
+  width: var(--marker-size);
+  height: var(--marker-size);
+  margin-top: calc((var(--line-height) - var(--marker-size)) / 2);
+  border-radius: 2px;
+  background: var(--accent);
 }
 
 @media (min-width: 768px) {

@@ -43,6 +43,7 @@
   "projects": {
     "repository": "Repository",
     "liveSite": "Live site",
+    "role": "My role",
     "status": {
       "inProgress": "in development"
     },

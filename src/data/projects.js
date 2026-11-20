@@ -11,10 +11,25 @@ export const projects = sortByNewest([
     date: "2026-11",
     status: PROJECT_STATUS.published,
     title: { pt: "Sistema de Aluguel de Carros", en: "Car Rental System" },
-    description: {
-      pt: "Sistema web de aluguel de carros, feito para uma disciplina da PUC Minas. Clientes fazem pedidos de aluguel, e agentes (uma locadora e um banco) avaliam os pedidos e executam os contratos, que podem vir com crédito do banco. A API em Spring Boot usa Spring Security com JWT e o Supabase como banco. O front em React tem tema claro e escuro e um design system documentado, e usa a BrasilAPI para preencher o endereço pelo CEP e avisar dos feriados no período do aluguel. O projeto tem testes em JUnit e Mockito, CI no GitHub Actions e diagramas UML alinhados ao código.",
-      en: "A web system for renting cars, built for a course at PUC Minas. Clients place rental requests, and agents (a rental company and a bank) evaluate them and execute the contracts, which may include credit from the bank. The Spring Boot API uses Spring Security with JWT and Supabase as the database. The React front end has a light and a dark theme and a documented design system, and uses BrasilAPI to fill in the address from the postal code (CEP) and to warn about national holidays during the rental period. The project has JUnit and Mockito tests, CI on GitHub Actions and UML diagrams kept in line with the code.",
+    summary: {
+      pt: "Sistema web de aluguel de carros feito para uma disciplina da PUC Minas: clientes pedem o aluguel, e uma locadora e um banco avaliam os pedidos e executam os contratos, que podem incluir crédito.",
+      en: "A car rental web app built for a PUC Minas course: clients request rentals, and a rental company and a bank review them and execute the contracts, which may include credit.",
     },
+    highlights: [
+      {
+        pt: "API em Spring Boot com autenticação JWT via Spring Security",
+        en: "Spring Boot API with JWT authentication via Spring Security",
+      },
+      {
+        pt: "Testes com JUnit e Mockito e CI no GitHub Actions",
+        en: "JUnit and Mockito tests with CI on GitHub Actions",
+      },
+      {
+        pt: "BrasilAPI preenche o endereço pelo CEP e avisa feriados no período",
+        en: "BrasilAPI fills in the address from the CEP and flags holidays",
+      },
+    ],
+    role: null,
     tags: ["Java", "Spring Boot", "Spring Security", "Supabase", "React"],
     repoUrl: "https://github.com/joaom-abreu/car-rental-system",
     liveUrl: "https://aluguel-carros.vercel.app",
@@ -31,10 +46,25 @@ export const projects = sortByNewest([
     date: "2026-09",
     status: PROJECT_STATUS.published,
     title: { pt: "Scribd to PDF", en: "Scribd to PDF" },
-    description: {
-      pt: "Ferramenta de linha de comando em Python que usa o Playwright para capturar cada página exibida no leitor do Scribd e reuni-las em um único PDF, na ordem correta. Retoma capturas interrompidas, gera o PDF de novo sem reabrir o navegador e pode aplicar OCR para deixar o texto pesquisável. O código é organizado em camadas e coberto por testes em pytest.",
-      en: "A Python command-line tool that uses Playwright to capture each page shown in the Scribd reader and merge them into a single PDF in the correct order. It resumes interrupted captures, rebuilds the PDF without reopening the browser and can run OCR to make the text searchable. The code is organized in layers and covered by pytest tests.",
+    summary: {
+      pt: "Ferramenta de linha de comando em Python que captura as páginas do leitor do Scribd e gera um único PDF na ordem certa.",
+      en: "A Python command-line tool that captures pages from the Scribd reader and builds a single PDF in the right order.",
     },
+    highlights: [
+      {
+        pt: "Retoma capturas interrompidas e refaz o PDF sem abrir o navegador",
+        en: "Resumes interrupted captures and rebuilds the PDF offline",
+      },
+      {
+        pt: "OCR opcional para deixar o texto pesquisável",
+        en: "Optional OCR to make the text searchable",
+      },
+      {
+        pt: "Código em camadas, coberto por testes em pytest",
+        en: "Layered code covered by pytest tests",
+      },
+    ],
+    role: null,
     tags: ["Python", "Playwright", "img2pdf", "OCRmyPDF", "pytest"],
     repoUrl: "https://github.com/joaom-abreu/scribd-to-pdf",
     liveUrl: null,
@@ -45,10 +75,25 @@ export const projects = sortByNewest([
     date: "2026-10",
     status: PROJECT_STATUS.inProgress,
     title: { pt: "Courtside API", en: "Courtside API" },
-    description: {
-      pt: "API REST de estatísticas da NBA em Go e PostgreSQL. Reúne times, jogadores e jogos e calcula a classificação da temporada direto no SQL. O código é dividido em handlers e repositórios, usa o net/http da biblioteca padrão e o driver pgx, e o banco sobe pelo Docker Compose já com os dados.",
-      en: "A REST API for NBA statistics in Go and PostgreSQL. It brings together teams, players and games and computes the season standings directly in SQL. The code is split into handlers and repositories, uses the standard library's net/http and the pgx driver, and the database starts with Docker Compose already seeded.",
+    summary: {
+      pt: "API REST de estatísticas da NBA em Go e PostgreSQL, com times, jogadores, jogos e a classificação da temporada.",
+      en: "A REST API for NBA statistics in Go and PostgreSQL, covering teams, players, games and season standings.",
     },
+    highlights: [
+      {
+        pt: "Classificação da temporada calculada direto no SQL",
+        en: "Season standings computed directly in SQL",
+      },
+      {
+        pt: "net/http da biblioteca padrão e driver pgx, em handlers e repositórios",
+        en: "Standard library net/http and pgx, split into handlers and repositories",
+      },
+      {
+        pt: "Banco sobe pelo Docker Compose já com os dados",
+        en: "Database starts with Docker Compose, already seeded",
+      },
+    ],
+    role: null,
     tags: ["Go", "PostgreSQL", "Docker"],
     repoUrl: "https://github.com/joaom-abreu/courtside-api",
     liveUrl: null,
@@ -59,9 +104,27 @@ export const projects = sortByNewest([
     date: "2026-10",
     status: PROJECT_STATUS.inProgress,
     title: { pt: "Cônci", en: "Cônci" },
-    description: {
-      pt: "Plataforma web, feita em equipe na PUC Minas, que conecta clientes a prestadores de serviços autônomos, com busca por categoria, agenda do prestador, acompanhamento do serviço e avaliações. A API usa Spring Boot e RESTHeart sobre o MongoDB Atlas, em Docker Compose, e o front é feito em React com TypeScript e Material UI.",
-      en: "A web platform, built as a team at PUC Minas, that connects clients with independent service providers, with search by category, a provider schedule, service tracking and reviews. The API uses Spring Boot and RESTHeart on MongoDB Atlas with Docker Compose, and the front end is built with React, TypeScript and Material UI.",
+    summary: {
+      pt: "Plataforma web feita em equipe de quatro pessoas na PUC Minas que conecta clientes a prestadores de serviço autônomos, com busca por categoria, agenda e avaliações.",
+      en: "A web platform built by a team of four at PUC Minas that connects clients with independent service providers, with category search, scheduling and reviews.",
+    },
+    highlights: [
+      {
+        pt: "API em Spring Boot e RESTHeart sobre MongoDB Atlas",
+        en: "API built with Spring Boot and RESTHeart on MongoDB Atlas",
+      },
+      {
+        pt: "Front-end em React com TypeScript e Material UI",
+        en: "React front end with TypeScript and Material UI",
+      },
+      {
+        pt: "Docker Compose, sprints e Git Flow",
+        en: "Docker Compose, sprints and Git Flow",
+      },
+    ],
+    role: {
+      pt: "Desenvolvedor back-end: fiz parte da API, a dockerização do projeto com Docker Compose e parte da configuração do MongoDB Atlas. Também organizo as tarefas da sprint e envio as entregas.",
+      en: "Back-end developer: I built part of the API, containerized the project with Docker Compose and handled part of the MongoDB Atlas setup. I also organize sprint tasks and submit the deliverables.",
     },
     tags: [
       "Spring Boot",
@@ -87,10 +150,25 @@ export const projects = sortByNewest([
     date: "2026-10",
     status: PROJECT_STATUS.published,
     title: { pt: "Site de Portfólio", en: "Portfolio Website" },
-    description: {
-      pt: "Um site pessoal, em português e inglês, para apresentar meus projetos. Uma API própria em Vercel Functions busca meus dados e minha atividade no GitHub e registra as visitas no Supabase, sem guardar IPs. O projeto também roda inteiro em Docker Compose, com testes e CI no GitHub Actions.",
-      en: "A bilingual personal website to showcase my projects. A custom API on Vercel Functions fetches my GitHub data and activity and records visits in Supabase without storing IPs. The whole project also runs on Docker Compose, with tests and CI on GitHub Actions.",
+    summary: {
+      pt: "Este site, em português e inglês, com uma API própria em Vercel Functions que busca meus dados do GitHub e conta as visitas no Supabase.",
+      en: "This website, in Portuguese and English, with its own API on Vercel Functions that fetches my GitHub data and counts visits in Supabase.",
     },
+    highlights: [
+      {
+        pt: "Contador de visitas que não guarda IP (hash que muda todo dia)",
+        en: "Visit counter that never stores IPs (daily rotating hash)",
+      },
+      {
+        pt: "Roda inteiro em Docker Compose, com testes e CI no GitHub Actions",
+        en: "Runs on Docker Compose, with tests and CI on GitHub Actions",
+      },
+      {
+        pt: "Design system próprio documentado em /design",
+        en: "Custom design system documented at /design",
+      },
+    ],
+    role: null,
     tags: ["React", "JavaScript", "Vercel", "Supabase", "Docker"],
     repoUrl: "https://github.com/joaom-abreu/portfolio",
     liveUrl: "https://joaomario.dev",

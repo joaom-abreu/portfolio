@@ -43,6 +43,7 @@
   "projects": {
     "repository": "Repositório",
     "liveSite": "Ver online",
+    "role": "Meu papel",
     "status": {
       "inProgress": "em desenvolvimento"
     },
