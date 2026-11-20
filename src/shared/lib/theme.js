@@ -2,6 +2,8 @@ export const THEME_STORAGE_KEY = "jm-theme";
 export const DARK_THEME = "dark";
 export const LIGHT_THEME = "light";
 
+const THEME_COLOR_SELECTOR = 'meta[name="theme-color"]';
+
 export function getOppositeTheme(theme) {
   return theme === DARK_THEME ? LIGHT_THEME : DARK_THEME;
 }
@@ -13,6 +15,12 @@ export function readAppliedTheme() {
 
 export function applyTheme(theme) {
   document.documentElement.dataset.theme = theme;
+  const background = getComputedStyle(document.documentElement)
+    .getPropertyValue("--bg")
+    .trim();
+  document
+    .querySelector(THEME_COLOR_SELECTOR)
+    ?.setAttribute("content", background);
 }
 
 export function storeTheme(theme) {
