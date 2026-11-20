@@ -9,7 +9,6 @@ export const projects = sortByNewest([
   {
     id: "car-rental-system",
     date: "2026-11",
-    dateLabel: { pt: "2026 · novembro", en: "2026 · November" },
     status: PROJECT_STATUS.published,
     title: { pt: "Sistema de Aluguel de Carros", en: "Car Rental System" },
     description: {
@@ -30,7 +29,6 @@ export const projects = sortByNewest([
   {
     id: "scribd-to-pdf",
     date: "2026-09",
-    dateLabel: { pt: "2026 · setembro", en: "2026 · September" },
     status: PROJECT_STATUS.published,
     title: { pt: "Scribd to PDF", en: "Scribd to PDF" },
     description: {
@@ -45,10 +43,6 @@ export const projects = sortByNewest([
   {
     id: "courtside-api",
     date: "2026-10",
-    dateLabel: {
-      pt: "2026 · em desenvolvimento",
-      en: "2026 · in development",
-    },
     status: PROJECT_STATUS.inProgress,
     title: { pt: "Courtside API", en: "Courtside API" },
     description: {
@@ -63,10 +57,6 @@ export const projects = sortByNewest([
   {
     id: "conci",
     date: "2026-10",
-    dateLabel: {
-      pt: "2026 · em desenvolvimento",
-      en: "2026 · in development",
-    },
     status: PROJECT_STATUS.inProgress,
     title: { pt: "Cônci", en: "Cônci" },
     description: {
@@ -95,7 +85,6 @@ export const projects = sortByNewest([
   {
     id: "portfolio",
     date: "2026-10",
-    dateLabel: { pt: "2026 · outubro", en: "2026 · October" },
     status: PROJECT_STATUS.published,
     title: { pt: "Site de Portfólio", en: "Portfolio Website" },
     description: {

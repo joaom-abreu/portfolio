@@ -43,6 +43,9 @@
   "projects": {
     "repository": "Repositório",
     "liveSite": "Ver online",
+    "status": {
+      "inProgress": "em desenvolvimento"
+    },
     "activity": {
       "title": "Atividade no GitHub",
       "viewProfile": "Ver perfil",
