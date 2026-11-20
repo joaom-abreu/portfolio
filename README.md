@@ -61,6 +61,7 @@ Como o foco dos meus estudos é **back-end e engenharia de dados**, o projeto va
 ## ✨ Funcionalidades Principais
 
 - 🧭 **Página única por seções:** Sobre mim, Projetos, Experiência e Contato, com menu que destaca a seção atual.
+- 🗂️ **Projetos em linha do tempo**, do mais recente para o mais antigo, em cards com resumo, destaques e, nos projetos em equipe, o meu papel.
 - 🌗 **Tema claro e escuro**, seguindo a preferência do sistema.
 - 🌐 **Português e inglês** no site inteiro.
 - 🪪 **Card de API no topo:** mostra ao vivo a resposta do `GET /api/joao`.
