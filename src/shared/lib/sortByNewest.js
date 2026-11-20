@@ -1,5 +1,5 @@
 export function sortByNewest(items) {
-  return items
-    .toSorted((first, second) => first.date.localeCompare(second.date))
-    .toReversed();
+  return items.toSorted((first, second) =>
+    second.date.localeCompare(first.date),
+  );
 }

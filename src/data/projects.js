@@ -43,27 +43,6 @@ export const projects = sortByNewest([
     media: null,
   },
   {
-    id: "portfolio",
-    date: "2026-10",
-    dateLabel: { pt: "2026 · outubro", en: "2026 · October" },
-    status: PROJECT_STATUS.published,
-    title: { pt: "Site de Portfólio", en: "Portfolio Website" },
-    description: {
-      pt: "Um site pessoal, em português e inglês, para apresentar meus projetos. Uma API própria em Vercel Functions busca meus dados e minha atividade no GitHub e registra as visitas no Supabase, sem guardar IPs. O projeto também roda inteiro em Docker Compose, com testes e CI no GitHub Actions.",
-      en: "A bilingual personal website to showcase my projects. A custom API on Vercel Functions fetches my GitHub data and activity and records visits in Supabase without storing IPs. The whole project also runs on Docker Compose, with tests and CI on GitHub Actions.",
-    },
-    tags: ["React", "JavaScript", "Vercel", "Supabase", "Docker"],
-    repoUrl: "https://github.com/joaom-abreu/portfolio",
-    liveUrl: "https://joaomario.dev",
-    media: {
-      src: "/projects/portfolio.webp",
-      alt: {
-        pt: "Topo do site de portfólio no tema escuro, com o nome João Mário Abreu, a foto e o card que mostra a resposta de /api/joao.",
-        en: "Top of the portfolio website in the dark theme, with the name João Mário Abreu, the photo and the card showing the /api/joao response.",
-      },
-    },
-  },
-  {
     id: "courtside-api",
     date: "2026-10",
     dateLabel: {
@@ -110,6 +89,27 @@ export const projects = sortByNewest([
       alt: {
         pt: "Logo do Cônci em fundo azul-marinho: uma mão dourada aponta para o acento do nome, com a frase “Um concierge para todos”.",
         en: "Cônci logo on a navy background: a golden hand points at the accent of the name, above the phrase “Um concierge para todos” (A concierge for everyone).",
+      },
+    },
+  },
+  {
+    id: "portfolio",
+    date: "2026-10",
+    dateLabel: { pt: "2026 · outubro", en: "2026 · October" },
+    status: PROJECT_STATUS.published,
+    title: { pt: "Site de Portfólio", en: "Portfolio Website" },
+    description: {
+      pt: "Um site pessoal, em português e inglês, para apresentar meus projetos. Uma API própria em Vercel Functions busca meus dados e minha atividade no GitHub e registra as visitas no Supabase, sem guardar IPs. O projeto também roda inteiro em Docker Compose, com testes e CI no GitHub Actions.",
+      en: "A bilingual personal website to showcase my projects. A custom API on Vercel Functions fetches my GitHub data and activity and records visits in Supabase without storing IPs. The whole project also runs on Docker Compose, with tests and CI on GitHub Actions.",
+    },
+    tags: ["React", "JavaScript", "Vercel", "Supabase", "Docker"],
+    repoUrl: "https://github.com/joaom-abreu/portfolio",
+    liveUrl: "https://joaomario.dev",
+    media: {
+      src: "/projects/portfolio.webp",
+      alt: {
+        pt: "Topo do site de portfólio no tema escuro, com o nome João Mário Abreu, a foto e o card que mostra a resposta de /api/joao.",
+        en: "Top of the portfolio website in the dark theme, with the name João Mário Abreu, the photo and the card showing the /api/joao response.",
       },
     },
   },
